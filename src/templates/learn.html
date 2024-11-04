@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learn.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <h1>Explora</h1>
+            <span>Descubre todo lo que necesitas sobre el tema</span>
+            <br>
+            <!--
+            <div>
+                <input type="text"><button>Buscar</button>
+            </div>
+            -->
+            <br>
+            <div class="grid-container"> <!-- dividir  los recuadros-->
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Plastico</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Vidrio</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Metal</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Carton</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Papel</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Biodegradable</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="item-grid">
+                    <div class="overlay"></div>
+                    <a class="item-title" href="#">Nocivos</a>
+                    <p class="item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+</body>
+
+</html>

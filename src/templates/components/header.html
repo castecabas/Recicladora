@@ -1,0 +1,72 @@
+<header>
+    <style>
+        header{
+            z-index: 9000;
+            display: flex;
+            justify-content: space-around;
+            min-height: min-content;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px solid gray;
+        }
+
+        .logo{
+            max-height: 50px;
+            aspect-ratio: 1/1;
+        }
+
+        .nav-link{
+            text-decoration: none;
+            color:black;
+            font-weight: bold;
+            margin: 15px 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar a:hover{
+            color:#00DD00;
+        }
+        
+        @media(max-width:700px){
+            header{
+                flex-direction: column;
+            }
+            
+            .navbar{
+                padding: 5px 5px;
+                justify-content: center;
+            }
+        }
+
+    </style>
+
+    <img alt="Logo de reciclaje"
+        src="https://storage.googleapis.com/a1aa/image/jF6WvgVGGo4yHFlK2EWtqxNebIzVZGIewI6GdeAjnFuFP3YnA.jpg" class="logo" />
+    <div class="navbar">
+        <a href="{{ url_for('index') }}" class="nav-link">
+            Inicio
+        </a>
+
+        <a href="{{ url_for('model') }}" class="nav-link">
+            Modelo
+        </a>
+
+        <a href="{{ url_for('learn')}}" class="nav-link">
+            Aprender
+        </a>
+
+        <a href="{{ url_for('recycle')}}" class="nav-link">
+            Reciclar
+        </a>
+
+        <a href="{{ url_for('news')}}" class="nav-link">
+            Noticias
+        </a>
+
+        <a href="#" class="nav-link">
+            Nosotros
+        </a>
+
+    </div>
+</header>

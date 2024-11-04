@@ -1,0 +1,109 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-div {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    flex: 1;
+    width: 100vw;
+    padding: 0;
+}
+
+.main-div h1{
+    color: #0AC12B;
+}
+
+.main-div span{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 90vw;
+    padding: 5px 0px 5px 0px;
+}
+
+.main-div section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+@media (max-width: 1280px) {
+    .main-div section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 970px) {
+    .main-div section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .main-div section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.main-div section article{
+    position: relative;
+    padding: 5px;
+    margin: 10px;
+    aspect-ratio: 1/1;
+    align-content: center;
+    max-height: 300px;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.main-div section article:hover{
+    transform: translateX(8px) translateY(-6px);
+}
+
+.main-div section article:hover .overlay{
+    opacity: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro semi-transparente */
+    opacity: 1; /* Invisible inicialmente */
+    transition: opacity 0.3s ease; /* Transición suave */
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.main-div section article a{
+    position: relative;
+    font-weight: bold;
+    font-size: 200%;
+    color: white;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    z-index: 2;
+}

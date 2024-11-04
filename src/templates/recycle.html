@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recycle.css') }}" >
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <section>
+                <article class="part1">
+                    <div class="overlay"></div>
+
+                        <h1>Que Desea Hacer</h1>
+                        <div class="btns">
+                            <a href="#">RECICLAR</a>
+                            <a href="#">REUTILIZAR</a>
+                            <a href="#">SOLIDARIZAR</a>
+                        </div>
+                        <br>
+                        <div>
+                            <span style="position: relative;color: white;font-weight: bold;">Que significan?<br>🔽</span>
+                        </div>
+
+                </article>
+                
+                <article class="part2">
+                    <div class="block">
+                        <img  src="https://acortar.link/qIqk6s"><br>
+                        <div class="block-txt">
+                        <h2>Reciclar</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt, perferendis.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <img  src="https://acortar.link/qIqk6s"><br>
+                        <div class="block-txt">
+                        <h2>Reutilizar</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt, perferendis.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <img  src="https://acortar.link/qIqk6s"><br>
+                        <div class="block-txt">
+                        <h2>Solidarizar</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt, perferendis.
+                        </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+</body>
+
+</html>
