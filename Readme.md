@@ -18,7 +18,7 @@
     -> pip install Ultralytics flask opencv-python numpy
 
   ° Verificar que el archivo del modelo (.pt) exista.
-  ° Ejecutar el archivo app.py
+  ° Ejecutar el archivo app.py o index.py
 
     -> python /src/app.py
 
