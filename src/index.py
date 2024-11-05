@@ -11,7 +11,6 @@ yolo_model = YOLOModel('src/model/best.pt')
 camera = Camera()
 
 # RUTAS
-
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
