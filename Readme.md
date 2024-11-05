@@ -20,7 +20,7 @@
   ° Verificar que el archivo del modelo (.pt) exista.
   ° Ejecutar el archivo app.py o index.py
 
-    -> python /src/app.py
+    -> python app.py
 
   Creditos:
   Carlos Steven Cardenas
