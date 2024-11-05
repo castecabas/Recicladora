@@ -45,7 +45,7 @@ body, html {
 .btn {
     background-color: #00DD00;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
     margin-top: 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -76,4 +76,9 @@ body, html {
     .btn { padding: 5px 10px; }
 }
 
+/* MODO OSCURO */
 
+body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
+}

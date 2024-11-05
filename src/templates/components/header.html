@@ -1,6 +1,6 @@
 <header>
     <style>
-        header{
+        header {
             z-index: 9000;
             display: flex;
             justify-content: space-around;
@@ -11,38 +11,44 @@
             border-bottom: 1px solid gray;
         }
 
-        .logo{
+        .logo {
             max-height: 50px;
             aspect-ratio: 1/1;
         }
 
-        .nav-link{
+        .nav-link {
             text-decoration: none;
-            color:black;
+            color: black;
             font-weight: bold;
             margin: 15px 15px;
             font-family: 'Roboto', sans-serif;
+            text-wrap: nowrap;
         }
 
-        .navbar a:hover{
-            color:#00DD00;
+        .navbar a:hover {
+            color: #00DD00;
         }
-        
-        @media(max-width:700px){
-            header{
+
+        .navbar label:hover {
+            color: #00DD00;
+        }
+
+        @media(max-width:800px) {
+            header {
                 flex-direction: column;
             }
-            
-            .navbar{
-                padding: 5px 5px;
-                justify-content: center;
-            }
-        }
 
+            .navbar {
+                justify-content: center;
+                padding: 20px 10px 10px 10px;
+            }
+
+        }
     </style>
 
     <img alt="Logo de reciclaje"
-        src="https://storage.googleapis.com/a1aa/image/jF6WvgVGGo4yHFlK2EWtqxNebIzVZGIewI6GdeAjnFuFP3YnA.jpg" class="logo" />
+        src="https://storage.googleapis.com/a1aa/image/jF6WvgVGGo4yHFlK2EWtqxNebIzVZGIewI6GdeAjnFuFP3YnA.jpg"
+        class="logo" />
     <div class="navbar">
         <a href="{{ url_for('index') }}" class="nav-link">
             Inicio
@@ -64,9 +70,35 @@
             Noticias
         </a>
 
-        <a href="#" class="nav-link">
+        <a href="{{ url_for('about')}}" class="nav-link">
             Nosotros
         </a>
+            <label class="nav-link" for="darkModeToggle"><input type="checkbox" class="btn_darkmode"
+                    id="darkModeToggle"> Dark mode</label>
 
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("darkModeToggle");
+            const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
+
+            // Aplicar el modo oscuro si estaba activado
+            if (darkModeEnabled) {
+                document.body.classList.add("dark-mode");
+                toggle.checked = true;
+            }
+
+            // Alternar el modo oscuro al cambiar el checkbox
+            toggle.addEventListener("change", () => {
+                if (toggle.checked) {
+                    document.body.classList.add("dark-mode");
+                    localStorage.setItem("darkMode", "enabled");
+                } else {
+                    document.body.classList.remove("dark-mode");
+                    localStorage.setItem("darkMode", "disabled");
+                }
+            });
+        });
+    </script>
 </header>

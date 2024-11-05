@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}" >
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <h1>Nosotros</h1>
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio illo eligendi, error eveniet vero cupiditate asperiores culpa quis architecto quos quibusdam, esse quas sint necessitatibus consequuntur, alias sit rerum ratione!</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Color_circle_%28RGB%29.svg/1200px-Color_circle_%28RGB%29.svg.png">
+            </div>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+</body>
+
+</html>

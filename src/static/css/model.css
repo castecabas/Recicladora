@@ -10,6 +10,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 .btn_openmenu {
     font-size: 20px;
     cursor: pointer;
@@ -247,4 +249,11 @@ main div #fileInput:hover {
 
 .aside .nav-link:hover {
     background-color: #1a58a8;
+}
+
+/* MODO OSCURO */
+
+body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
 }

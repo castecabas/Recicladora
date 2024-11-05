@@ -118,3 +118,10 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* MODO OSCURO */
+
+body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
+}

@@ -12,6 +12,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -142,4 +144,12 @@ section .part2 .block .block-txt p {
         transform: translateX(0px);
         padding-left: 0px;
     }
+}
+
+
+/* MODO OSCURO */
+
+body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
 }

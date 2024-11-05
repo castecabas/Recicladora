@@ -12,6 +12,8 @@ body {
     min-height: 100vh;
 }
 
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -106,4 +108,11 @@ body {
     overflow-wrap: break-word;
     text-decoration: none;
     z-index: 2;
+}
+
+/* MODO OSCURO */
+
+body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
 }
