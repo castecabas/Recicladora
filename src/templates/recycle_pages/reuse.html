@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reuse.css') }}">
+    <style>
+        /* Clase para el contenido desplegable */
+        .toggle-content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        /* Clase que indica que el contenido está visible */
+        .toggle-content.show {
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <h1>Reutiliza</h1>
+            <span>Busca tu material y realiza para darle un nuevo uso.</span>
+            <section>
+                <article>
+                    <div style="background-color: #4ac6ff;" class="toggle-button">
+                        <label>Plástico </label>
+                        <img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" height="10">
+                    </div>
+
+                    <div class="toggle-content show">
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div style="background-color: #fffc4a;" class="toggle-button">
+                        <label>Vidrio </label>
+                        <img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" height="10">
+                    </div>
+
+                    <div class="toggle-content show">
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">aaaaaaaaaaa <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta 
+                                <img class="logo-ytb" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" style="text-decoration: none;">Maceta <img class="logo-ytb"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"></a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".toggle-content").forEach(content => {
+                // Establece el max-height al cargar la página
+                content.style.maxHeight = content.scrollHeight + "px";
+            });
+
+            document.querySelectorAll(".toggle-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    const content = this.nextElementSibling;
+
+                    if (content.classList.contains("show")) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+
+                    content.classList.toggle("show");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

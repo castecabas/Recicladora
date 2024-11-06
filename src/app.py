@@ -37,6 +37,18 @@ def news():
 def recycle():
     return render_template('recycle.html')
 
+@app.route('/recycle/recicla')
+def recicla():
+    return render_template('/recycle_pages/recicla.html')
+
+@app.route('/recycle/reuse')
+def reuse():
+    return render_template('/recycle_pages/reuse.html')
+
+@app.route('/recycle/solidarity')
+def solidarity():
+    return render_template('/recycle_pages/solidarity.html')
+
 # FUNCIONES
 
     #NOTE: obtener las camaras
