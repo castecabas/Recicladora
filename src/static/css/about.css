@@ -33,6 +33,14 @@ body {
 
 .main-div h1 {
     color: #0AC12B;
+    font-size: 500%;
+    text-shadow: -2px -2px 0 #004100, -2px 2px 0 #004100, 2px -2px 0 #004100, 2px 2px 0 #004100;
+}
+
+@media(max-width:400px){
+    .main-div h1 {
+        font-size: 400%;
+    }
 }
 
 .main-div div {
@@ -45,16 +53,18 @@ body {
 .main-div div img {
     aspect-ratio: 1/1;
     max-height: 400px;
-    padding: 20px;
+    padding: 40px;
+    border-radius: 25%;
 }
 
 .main-div div p {
     padding: 40px;
     font-size: 3vh;
     overflow-wrap: break-word;
-    background-color: aquamarine;
-    border-radius: 10px;
+    background-color: #FFD7B5;
+    border-radius: 30px;
     max-width: 800px;
+    border: 4px outset rgb(36, 36, 36);
 }
 
 @media(max-width:860px) {
@@ -71,6 +81,19 @@ body {
 /* MODO OSCURO */
 
 body.dark-mode{
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #000014;
+    color: rgb(0, 0, 0);
+    
+}
+
+body.dark-mode .main-div h1{
+    text-shadow: -2px -2px 0 #e3e7eb,
+    2px 2px 0 #e3e7eb, 
+    2px -2px 0 #e3e7eb, 
+    2px 2px 0 #e3e7eb;
+}
+
+body.dark-mode .main-div p{
+    border: 4px outset white;
+    background-color: #feffd8;
 }

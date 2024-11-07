@@ -33,13 +33,14 @@ body {
 
 section .part1 {
     padding: 100px 100px 50px 100px;
-    background-image: url(https://static5.depositphotos.com/1010111/457/v/950/depositphotos_4575042-stock-illustration-recycling-eco-vector-background.jpg);
+    background-image: url(https://i.postimg.cc/L6M0905G/recycle.webp);
     position: relative;
     left: 0;
     width: 100vw;
-    min-height: 400px;
+    min-height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
+    align-content: center;
 }
 
 
@@ -50,16 +51,27 @@ section .part1 .overlay {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.55);
     z-index: 0;
     border-radius: 4px;
 }
 
 section .part1 h1 {
-    font-size: 240%;
+    font-size: 400%;
     color: #0AC12B;
     text-shadow: -2px -2px 0 #004100, -2px 2px 0 #004100, 2px -2px 0 #004100, 2px 2px 0 #004100;
     position: relative;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+@media(max-width:400px)
+{
+    section .part1 h1{
+        font-size: 350%;
+        padding: 0;
+    }
 }
 
 section .part1 .btns {
@@ -73,8 +85,8 @@ section .part1 a {
     background-color: #0AC12B;
     text-decoration: none;
     border: 1px solid #004100;
-    padding: 20px;
-    margin: 5px;
+    padding: 15px;
+    margin: 5px 15px 5px 15px;
     border-radius: 8px;
     font-weight: bold;
     color: white;
@@ -111,9 +123,9 @@ section .part2 .block img {
     border-radius: 50%;
     max-height: 200px;
     aspect-ratio: 1/1;
-    padding: 10px;
     z-index: 2;
     transform: translateX(50px);
+    border: 2px solid black;
 }
 
 section .part2 .block .block-txt{
@@ -123,6 +135,8 @@ section .part2 .block .block-txt{
     padding-left: 100px;
     padding-right: 5px;
     transform: translateX(-50px);
+    border: 2px solid black;
+    width: 40vw;
 }
 
 section .part2 .block .block-txt h2 {
@@ -150,6 +164,21 @@ section .part2 .block .block-txt p {
 /* MODO OSCURO */
 
 body.dark-mode{
-    background-color: #121212;
+    background-color: #000014;
     color: #ffffff;
+}
+
+body.dark-mode section .part1 h1{
+    text-shadow: -2px -2px 0 #e3e7eb,
+    2px 2px 0 #e3e7eb, 
+    2px -2px 0 #e3e7eb, 
+    2px 2px 0 #e3e7eb;
+}
+
+body.dark-mode section .part2 .block .block-txt{
+    color: black;
+}
+
+body.dark-mode section .part2 .block img ,body.dark-mode section .part2 .block-txt{
+    border: 2px solid rgb(255, 255, 255);
 }

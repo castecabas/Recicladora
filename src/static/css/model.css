@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%;
+
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -8,9 +8,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: all 0.5s ease;
 }
 
-
+main {
+    max-height: auto;
+}
 
 .btn_openmenu {
     font-size: 20px;
@@ -63,6 +66,7 @@ main div #video {
     max-width: 640px;
     width: 100%;
     max-height: 700px;
+    aspect-ratio: 4/3;
     padding: 0;
 }
 
@@ -76,7 +80,7 @@ main div #resultImage {
 }
 
 main div #captureBtn,
-main div #fileInput {
+main div #fileinputlabel {
     border-radius: 20px;
     background-color: #2AB52A;
     color: white;
@@ -92,7 +96,7 @@ main div #fileInput:hover {
 
 
 .aside {
-    background: url(https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg);
+    background: url(https://i.postimg.cc/8kbKKzK0/model-aside.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -127,7 +131,7 @@ main div #fileInput:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.55);
     z-index: 101;
 }
 
@@ -168,12 +172,13 @@ main div #fileInput:hover {
     display: inline-block;
     padding: 0;
     margin: 0;
-  }
-  
-  /* Ocultar el tooltip por defecto */
-  .tooltip-text {
-    opacity: 0; /* Oculto por defecto */
-    width: 190px;
+}
+
+/* Ocultar el tooltip por defecto */
+.tooltip-text {
+    opacity: 0;
+    /* Oculto por defecto */
+    width: 135px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -181,44 +186,50 @@ main div #fileInput:hover {
     padding: 5px;
     border-radius: 5px;
     position: absolute;
-    top: -60px; /* Ajusta la posición para que esté sobre la imagen */
+    top: -120px;
+    /* Ajusta la posición para que esté sobre la imagen */
     left: 50%;
     transform: translateX(-25%);
-    transition: opacity 0.3s ease-in-out; /* Transición suave */
+    transition: opacity 0.3s ease-in-out;
+    /* Transición suave */
     z-index: 9000;
-  }
-  
-  /* Flecha del tooltip */
-  .tooltip-text::after {
+}
+
+/* Flecha del tooltip */
+.tooltip-text::after {
     content: "";
     position: absolute;
-    bottom: -5px; /* Flecha debajo del tooltip */
+    bottom: -5px;
+    /* Flecha debajo del tooltip */
     left: 50%;
     transform: translateX(-50%);
     border-width: 5px;
     border-style: solid;
     border-color: #333 transparent transparent transparent;
-  }
-  
-  /* Mostrar el tooltip al pasar el ratón sobre la imagen */
-  .tooltip-container:hover .tooltip-text {
+}
+
+/* Mostrar el tooltip al pasar el ratón sobre la imagen */
+.tooltip-container:hover .tooltip-text {
     opacity: 1;
-    animation: hideTooltip 5s forwards; /* Inicia la animación para ocultarlo después de 3 segundos */
-  }
-  
-  /* Animación para ocultar el tooltip */
-  @keyframes hideTooltip {
+    animation: hideTooltip 18s forwards;
+    /* Inicia la animación para ocultarlo después de 3 segundos */
+}
+
+/* Animación para ocultar el tooltip */
+@keyframes hideTooltip {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     90% {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
+}
+
 
 .aside #confidenceThreshold {
     accent-color: #2AB52A;
@@ -237,7 +248,8 @@ main div #fileInput:hover {
     background-color: #219121;
 }
 
-.aside .nav-link {
+.aside .nav-link,
+.aside .nav-link-aside {
     text-decoration: none;
     color: white;
     background-color: #206BCE;
@@ -251,9 +263,37 @@ main div #fileInput:hover {
     background-color: #1a58a8;
 }
 
+.aside .nav-link-aside {
+    background-color: #31ca31;
+    font-size: small;
+}
+
+.aside .nav-link-aside:hover {
+    background-color: #2AB52A;
+    cursor: pointer;
+}
+
+label#fileinputlabel:hover {
+    cursor: pointer;
+    background-color: #2AB52A;
+}
+
 /* MODO OSCURO */
 
-body.dark-mode{
-    background-color: #121212;
-    color: #ffffff;
+body.dark-mode {
+    background-color: #000014;
+}
+
+body.dark-mode #video {
+    border: 1px outset white;
+}
+
+body.dark-mode .container p,
+body.dark-mode .container h3 {
+    color: white;
+}
+
+body.dark-mode .container p,
+body.dark-mode .container ul#detectionsList li {
+    color: white;
 }

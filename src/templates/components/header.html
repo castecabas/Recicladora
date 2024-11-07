@@ -1,5 +1,9 @@
 <header>
     <style>
+        body{
+            transition: all 0.1s ease-in;
+        }
+
         header {
             z-index: 9000;
             display: flex;
@@ -44,10 +48,26 @@
             }
 
         }
+
+        /* MODO OSCURO */
+
+        body.dark-mode header{
+            background-color: black;
+            border-bottom: 1px solid rgb(231, 231, 231);
+        }
+
+        body.dark-mode header .navbar a,body.dark-mode header .navbar label{
+            color: white;
+        }
+
+        body.dark-mode .navbar a:hover {
+            color: #00DD00;
+        }
+
     </style>
 
     <img alt="Logo de reciclaje"
-        src="https://storage.googleapis.com/a1aa/image/jF6WvgVGGo4yHFlK2EWtqxNebIzVZGIewI6GdeAjnFuFP3YnA.jpg"
+        src="https://i.postimg.cc/gk7MpWkm/logo.webp"
         class="logo" />
     <div class="navbar">
         <a href="{{ url_for('index') }}" class="nav-link">
@@ -78,27 +98,5 @@
 
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggle = document.getElementById("darkModeToggle");
-            const darkModeEnabled = localStorage.getItem("darkMode") === "enabled";
-
-            // Aplicar el modo oscuro si estaba activado
-            if (darkModeEnabled) {
-                document.body.classList.add("dark-mode");
-                toggle.checked = true;
-            }
-
-            // Alternar el modo oscuro al cambiar el checkbox
-            toggle.addEventListener("change", () => {
-                if (toggle.checked) {
-                    document.body.classList.add("dark-mode");
-                    localStorage.setItem("darkMode", "enabled");
-                } else {
-                    document.body.classList.remove("dark-mode");
-                    localStorage.setItem("darkMode", "disabled");
-                }
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/dark_mode.js') }}"></script>
 </header>

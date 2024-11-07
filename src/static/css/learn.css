@@ -12,12 +12,14 @@ body {
 .main-div h1{
     color: #009A00;
     font-size: 500%;
-
+    text-shadow: -2px -2px 0 #004100, -2px 2px 0 #004100, 2px -2px 0 #004100, 2px 2px 0 #004100;
+    margin-bottom: 25px;
 }
+
 
 .main-div span{
     color:#383838;
-    font-weight:500;
+    font-weight:600;
 }
 
 .container {
@@ -41,8 +43,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    width: 100%;
-    max-width: 1200px;
+    width: 90vw;
+
 }
 
 /* Item styling */
@@ -52,7 +54,6 @@ body {
     aspect-ratio: 1; /* Cuadrado */
     background-size: cover;
     background-position: center;
-    background-image: url(https://hlpklearfold.es/wp-content/uploads/2021/03/nature-3289812_1280.jpg);
     border-radius: 4px;
     overflow: hidden;
     display: flex;
@@ -71,7 +72,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.55);
     z-index: 1;
     border-radius: 4px;
 }
@@ -84,7 +85,7 @@ body {
 }
 
 .item-title {
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
     color: #00AAFF;
     text-decoration: none;
@@ -122,6 +123,18 @@ body {
 /* MODO OSCURO */
 
 body.dark-mode{
-    background-color: #121212;
+    background-color: #000014;
     color: #ffffff;
 }
+
+body.dark-mode h1{
+    text-shadow: -2px -2px 0 #e3e7eb,
+    2px 2px 0 #e3e7eb, 
+    2px -2px 0 #e3e7eb, 
+    2px 2px 0 #e3e7eb;
+}
+
+body.dark-mode span{
+    color: white;
+}
+

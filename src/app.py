@@ -25,6 +25,34 @@ def about():
 def learn():
     return render_template('learn.html')
 
+@app.route('/learn/plastic')
+def plastic():
+    return render_template('/learn_pages/plastic.html')
+
+@app.route('/learn/glass')
+def glass():
+    return render_template('/learn_pages/paper.html')
+
+@app.route('/learn/biodegradable')
+def biodegradable():
+    return render_template('/learn_pages/paper.html')
+
+@app.route('/learn/metal')
+def metal():
+    return render_template('/learn_pages/paper.html')
+
+@app.route('/learn/cardboard')
+def cardboard():
+    return render_template('/learn_pages/paper.html')
+
+@app.route('/learn/paper')
+def paper():
+    return render_template('/learn_pages/paper.html')
+
+@app.route('/learn/nocivos')
+def nocivos():
+    return render_template('/learn_pages/paper.html')
+
 @app.route('/model')
 def model():
     return render_template('model.html')

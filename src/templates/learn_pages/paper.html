@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learn_pages.css') }}">
+
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <h1>Papel</h1>
+            <span> Definicion del papel ,introductorio</span><br>
+            <div class="video">
+                <div class="overlay"></div>
+                <iframe src="https://www.youtube.com/embed/dBqeryScyF0?si=twWVwnFfozQjhweM"
+                    title="Video del plastico" frameborder="0"
+                    
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+            </div>
+            <section>
+                <article style="background-color: #0089c9;">
+                    <div style="background-color: #00aeff;" class="toggle-button">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5777/5777516.png"  style="margin-bottom: 10px;aspect-ratio: 1/1;height:50px">
+                        <label >Papel </label>
+                    </div>
+                    <div class="toggle-content">
+                        <div class="item-content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ducimus temporibus odio esse maiores</p>
+                        </div>
+                    </div>
+                </article>
+                
+            </section>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+
+    <script src="{{url_for('static', filename='js/toggle_btn.js')}}"></script>
+</body>
+
+</html>
