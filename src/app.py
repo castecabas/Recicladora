@@ -31,19 +31,19 @@ def plastic():
 
 @app.route('/learn/glass')
 def glass():
-    return render_template('/learn_pages/paper.html')
+    return render_template('/learn_pages/glass.html')
 
 @app.route('/learn/biodegradable')
 def biodegradable():
-    return render_template('/learn_pages/paper.html')
+    return render_template('/learn_pages/biodegradable.html')
 
 @app.route('/learn/metal')
 def metal():
-    return render_template('/learn_pages/paper.html')
+    return render_template('/learn_pages/metal.html')
 
 @app.route('/learn/cardboard')
 def cardboard():
-    return render_template('/learn_pages/paper.html')
+    return render_template('/learn_pages/cardboard.html')
 
 @app.route('/learn/paper')
 def paper():
@@ -51,7 +51,7 @@ def paper():
 
 @app.route('/learn/nocivos')
 def nocivos():
-    return render_template('/learn_pages/paper.html')
+    return render_template('/learn_pages/nocivo.html')
 
 @app.route('/model')
 def model():

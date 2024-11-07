@@ -16,12 +16,12 @@
             <span>En Colombia, se unifica los residuos en 3 colores.</span>
             <section class="bins">
                 <article class="title">
-                    <p style="color:white">Aprovechables</p>
-                    <p style="color:green">Organicos Aprovechables</p>
-                    <p style="color:black">No Aprovechables</p>
+                    <p class="t1" style="color:white">Aprovechables</p>
+                    <p class="t2" style="color:green">Organicos Aprovechables</p>
+                    <p class="t3">No Aprovechables</p>
                 </article>
-                <article >
-                    <img class="image"src="https://www.canecasdereciclaje.com/cdn/shop/files/Canecas.png?v=1685477212&width=1500">
+                <article>
+                    <img class="image" src="https://i.postimg.cc/K8f3TBjf/recicla-bins.webp">
                 </article>
                 <article class="descripcion">
                     <div class="overlay"></div>
@@ -31,13 +31,13 @@
                 </article>
             </section>
             <h2>Departamentos</h2>
-            <form>
-                <select title="deparments">
-                    <option selected disabled>-Ninguna-</option>
-                    <option>Amazonas</option>
-                    <option>Santander</option>
-                </select>
-            </form>
+
+            <select title="deparments" class="deparments">
+                <option selected hidden>Ninguna</option>
+                <option>Amazonas</option>
+                <option>Santander</option>
+            </select>
+
             <section class="direction">
                 <article class="Amazonas">
                     <h3>- Amazonas -</h3>
@@ -60,21 +60,20 @@
                         Departamento Rigoberto (Centro de Reciclaje)<br>
                         Cra 18 #40-2 - Leticia<br>
                         31209846532<br>
-                        <a href="https://maps.app.goo.gl/Ypqgr4EBgeNHJUYX8">Ir a Maps</a>
+                        <a class="link-map" href="https://maps.app.goo.gl/Ypqgr4EBgeNHJUYX8">Ir a Maps</a>
                     </div>
                     <div>
                         Departamento Antuan (Centro de Reciclaje)<br>
                         Cra 18 #40-2 - Leticia<br>
                         31209846532<br>
-                        <a href="https://maps.app.goo.gl/Ypqgr4EBgeNHJUYX8">Ir a Maps</a>
+                        <a class="link-map" href="https://maps.app.goo.gl/Ypqgr4EBgeNHJUYX8">Ir a Maps</a>
                     </div>
                 </article>
             </section>
-            <!-- Aca se supone de deberia ir el buscador de google maps
-        -->
             <br>
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1d4mNFudfN13l7_bi-wwAoLDsm31FXQY&ehbc=2E312F"
-                width="90%" height="480" style="border-radius: 20px;" title="cuadro de los lugares de reciclaje"></iframe>
+                width="90%" height="480" style="border-radius: 20px;"
+                title="cuadro de los lugares de reciclaje"></iframe>
             <br>
         </main>
         {% include 'components/footer.html' %}

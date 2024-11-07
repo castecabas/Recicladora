@@ -12,8 +12,6 @@ body {
     min-height: 100vh;
 }
 
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -33,19 +31,21 @@ body {
 
 .main-div h1 {
     color: #0AC12B;
-
+    font-size: 500%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .main-div span {
-    font-size: large;
+    font-weight: 600;
 }
 
-.main-div .bins{
+.main-div .bins {
     display: flex;
     flex-direction: column;
 }
 
-.main-div .bins .title{
+.main-div .bins .title {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -55,65 +55,67 @@ body {
     align-items: center;
 }
 
-@media(max-width:800px){
-    .main-div .bins .title{
+.main-div .bins .title p.t3 {
+    color: black;
+}
+
+@media(max-width:800px) {
+    .main-div .bins .title {
         font-size: 16px;
     }
 }
 
-@media(max-width:800px){
-    .main-div .bins .title{
+@media(max-width:800px) {
+    .main-div .bins .title {
         font-size: 13px;
     }
 }
 
-.main-div .bins .image{
+.main-div .bins .image {
     aspect-ratio: auto;
     max-height: 480px;
     max-width: 80vw;
     border-radius: 20px;
 }
 
-.main-div .bins .descripcion{
+.main-div .bins .descripcion {
     position: relative;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-image: url(https://www.enelx.com/content/dam/local-colombia/articulos-personas/banners/2024/05/dia-mundial-del-reciclaje/dia-mundial-del-reciclaje_desktop.webp);
-    background-size:cover;
+    justify-content: space-evenly;
+    background-image: url(https://i.postimg.cc/jjQWTN0P/recicla-banner.webp);
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 6px;
-
+    align-self: center;
+    margin: 0;
+    width: 60vw;
+    text-align: center;
 }
 
-@media(max-width:1004px){
-    .main-div .bins .descripcion{
+@media(max-width:1004px) {
+    .main-div .bins .descripcion {
         font-size: 12px;
-        padding: 20px 10px 20px 10px;
+        width: 70vw;
     }
 }
 
-@media(max-width:850px){
-    .main-div .bins .descripcion{
+@media(max-width:850px) {
+    .main-div .bins .descripcion {
         font-size: 11px;
-        padding: 20px 5px 20px 5px;
+        width: 80vw;
     }
 }
 
-@media(max-width:650px){
-    .main-div .bins .descripcion{
+@media(max-width:650px) {
+    .main-div .bins .descripcion {
         font-size: 9px;
-        padding: 20px 2px 20px 2px;
+
+        width: 90vw;
     }
 }
 
-@media(max-width:336px){
-    .main-div .bins .descripcion{
-        font-size: 8px;
-        padding: 20px 2px 20px 2px;
-    }
-}
 
 .main-div .bins .descripcion .overlay {
     position: absolute;
@@ -121,37 +123,43 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 6px;
     z-index: 1;
 }
 
-.main-div .bins .descripcion p{
+.main-div .bins .descripcion p {
     max-width: 300px;
     overflow-wrap: break-word;
     color: white;
     font-weight: bolder;
     z-index: 2;
+    text-align: center;
 }
 
-.main-div .direction{
+.main-div select.deparments {
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+}
+
+.main-div .direction {
     display: flex;
     flex-direction: column;
 }
 
-.main-div .direction article{
+.main-div .direction article {
     align-items: center;
     justify-content: center;
     max-width: 90vw;
 }
 
-.main-div .direction article h3{
+.main-div .direction article h3 {
     width: 90vw;
-    text-align:left;
+    text-align: left;
     border-bottom: 3px solid black;
 }
 
-.main-div .direction article div{
+.main-div .direction article div {
     position: relative;
     background-color: #FFEFBC;
     border-radius: 20px;
@@ -164,13 +172,27 @@ body {
     align-self: center;
 }
 
-.main-div .direction article div .link-map{
+.main-div .direction article div .link-map {
     color: red;
 }
 
 /* MODO OSCURO */
 
-body.dark-mode{
-    background-color: #121212;
+body.dark-mode {
+    background-color: #000014;
     color: #ffffff;
+}
+
+body.dark-mode .main-div .bins .title p.t3 {
+    color: #b9b9b9;
+}
+
+body.dark-mode .main-div .direction article div {
+    background-color: #bcccff;
+    color: black;
+
+}
+
+body.dark-mode .main-div .direction article h3 {
+    border-bottom: 3px solid rgb(255, 255, 255);
 }

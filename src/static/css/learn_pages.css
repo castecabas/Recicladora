@@ -33,11 +33,19 @@ body {
 
 .main-div h1 {
     color: #0AC12B;
+    font-size: 450%;
+    text-shadow: -2px -2px 0 #004100, -2px 2px 0 #004100, 2px -2px 0 #004100, 2px 2px 0 #004100;
+    margin-bottom: 20px;
+}
+
+.main-div span{
+    font-weight:600;
+    width: 80vw;
 }
 
 .main-div div.video{
     position: relative;
-    background-image: url(https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg);
+    background-image: url(https://i.postimg.cc/1z2KQCCj/LP-banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -52,7 +60,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Oscurecimiento con un fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurecimiento con un fondo semitransparente */
     z-index: 1;
 }
 
@@ -60,7 +68,7 @@ body {
     width: 60%;
     aspect-ratio: 16/9;
     min-height: 360px;
-    max-height: 720px;
+    max-height: auto;
     border: none;
     z-index: 2;
     position: relative;
@@ -107,7 +115,6 @@ body {
 
 .main-div article .toggle-button label{
     text-shadow: -2px -2px 0 #004100, -2px 2px 0 #004100, 2px -2px 0 #004100, 2px 2px 0 #004100;
-
 }
 
 .main-div article .toggle-content {
@@ -124,5 +131,37 @@ body {
 .main-div article .toggle-content p{
     overflow-wrap: break-word;
     text-align: justify;
-    margin: 16px;
+    margin: 20px;
+}
+
+.main-div article .toggle-content .item-content{
+    color: black;
+}
+
+.main-div article .toggle-content .item-content p {
+    line-height: 25px;
+    font-size: small;
+    font-weight: 600;
+}
+
+.toggle-content .item-content ul li{
+    font-weight: 600;
+    font-size: small;
+    text-align: left;
+    line-height: 30px;
+}
+
+/* MODO OSCURO */
+
+body.dark-mode{
+    background-color: #000014;
+    color: rgb(255, 255, 255);
+}
+
+
+body.dark-mode .main-div h1{
+    text-shadow: -2px -2px 0 #e3e7eb,
+    2px 2px 0 #e3e7eb, 
+    2px -2px 0 #e3e7eb, 
+    2px 2px 0 #e3e7eb;
 }
