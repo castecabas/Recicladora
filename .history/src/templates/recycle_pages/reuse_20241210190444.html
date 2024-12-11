@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reuse.css') }}">
+    <style>
+        /* Clase para el contenido desplegable */
+        .toggle-content {
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        /* Clase que indica que el contenido está visible */
+        .toggle-content.show {
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <h1>Reutiliza</h1>
+            <span>Busca tu material y realiza para darle un nuevo uso.</span>
+            <section>
+                <article>
+                    <div class="toggle-button btn_1">
+                        <label>Plástico </label>
+                        <img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" height="10">
+                    </div>
+
+                    <div class="toggle-content show">
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" class="txt">Maceta </a><img class="logo-ytb"
+                            src="{{url_for('static', filename='img/icon_yt.webp')}}">
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <div class="toggle-button btn_2">
+                        <label>Vidrio </label>
+                        <img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" height="10">
+                    </div>
+
+                    <div class="toggle-content show">
+                        <div class="item-content">
+                            <img class="miniature"
+                                src="https://cdn.www.gob.pe/uploads/document/file/5513564/876678-1.jpg">
+                            <a href="#" class="txt">Maceta </a><img class="logo-ytb"
+                            src="{{url_for('static', filename='img/icon_yt.webp')}}">
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+
+    <script src="{{url_for('static', filename='js/toggle_btn.js')}}"></script>
+</body>
+
+</html>

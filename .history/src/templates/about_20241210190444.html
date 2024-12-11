@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        {% include 'components/header.html' %}
+        <main class="main-div">
+            <h1>Nosotros</h1>
+            <div>
+                <p>
+                    Estamos comprometidos a guiar a las personas con el cuidado del medio ambiente y promocionar
+                    prácticas que contribuyan a un
+                    Lugar más limpio. Nuestra misión es facilitar el brindar soluciones, aprendizaje y gestión de
+                    residuos.
+                    <br>
+                    Lo importante es dar la iniciativa a cada individuo, y te invitamos a unirte en esta misión;
+                    descubre cómo dejar una marca en tu entorno.
+                    <br><br>
+                    <b>Nuestra misión es lograr un futuro cada vez más ecológico.</b>
+                </p>
+                <img src="https://i.postimg.cc/tJpj0Rx4/about.webp">
+            </div>
+        </main>
+        {% include 'components/footer.html' %}
+    </div>
+</body>
+
+</html>
