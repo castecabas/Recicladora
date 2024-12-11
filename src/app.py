@@ -116,7 +116,7 @@ def send_email():
 
     try:
         # Crear y enviar el mensaje
-        msg = Message(asunto, sender=email, recipients=['joale.343@gmail.com'])
+        msg = Message(asunto, sender=email, recipients=['cardenas20220113@gmail.com'])
         msg.body = mensaje
         msg.reply_to = email
         mail.send(msg)

@@ -121,7 +121,7 @@ body {
 }
 
 .main-div article .toggle-content .item-content .miniature {
-    aspect-ratio: 9/7;
+    aspect-ratio: 5/4;
     max-height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -165,4 +165,8 @@ body.dark-mode .main-div article{
 
 body.dark-mode .main-div article .toggle-content .item-content a.txt{
     color: white;
+}
+
+body.dark-mode .main-div article .toggle-content .item-content a.txt:hover{
+    color: #ff4a4a;
 }
