@@ -80,13 +80,9 @@ body {
         flex-direction: column-reverse;
     }
 
-    .main-div div.contain-image{
-        height: 300px;
-    }
-
     .main-div div.contain-image img {
         max-width: 300px;
-        
+        height: min-content;
     }
 }
 
@@ -97,13 +93,8 @@ body {
         flex-direction: column-reverse;
     }
 
-    .main-div div.contain-image{
-        height: 300px;
-    }
-
     .main-div div.contain-image img {
         max-width: 210px;
-        
     }
 }
 

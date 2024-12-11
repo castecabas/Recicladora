@@ -80,10 +80,6 @@ body {
         flex-direction: column-reverse;
     }
 
-    .main-div div.contain-image{
-        height: 300px;
-    }
-
     .main-div div.contain-image img {
         max-width: 300px;
         
@@ -98,7 +94,7 @@ body {
     }
 
     .main-div div.contain-image{
-        height: 300px;
+        height: min-content;
     }
 
     .main-div div.contain-image img {

@@ -80,13 +80,8 @@ body {
         flex-direction: column-reverse;
     }
 
-    .main-div div.contain-image{
-        height: 300px;
-    }
-
     .main-div div.contain-image img {
         max-width: 300px;
-        
     }
 }
 
@@ -97,13 +92,8 @@ body {
         flex-direction: column-reverse;
     }
 
-    .main-div div.contain-image{
-        height: 300px;
-    }
-
     .main-div div.contain-image img {
         max-width: 210px;
-        
     }
 }
 
@@ -147,7 +137,7 @@ body {
     padding: 0;
     aspect-ratio: 1/1;
     position: relative;
-    
+    height: fit-content;
 }
 
 .main-div section article div.contain-image img {
@@ -155,7 +145,6 @@ body {
     width: 450px;
     aspect-ratio: 1/1;
     padding: 10px;
-    margin-bottom: 15px;
     z-index: 2;
     background-size: cover;
     background-repeat: no-repeat;
