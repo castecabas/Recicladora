@@ -127,6 +127,31 @@ def news():
         "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
         "href_link":"#",
         "name":"Conferencia de la vida"
+    },
+    {
+        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
+        "href_link":"#",
+        "name":"Conferencia de la vida"
+    },
+    {
+        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
+        "href_link":"#",
+        "name":"Conferencia de la vida"
+    },
+    {
+        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
+        "href_link":"#",
+        "name":"Conferencia de la vida"
+    },
+    {
+        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
+        "href_link":"#",
+        "name":"Conferencia de la vida"
+    },
+    {
+        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
+        "href_link":"#",
+        "name":"Conferencia de la vida"
     }
     ]
 

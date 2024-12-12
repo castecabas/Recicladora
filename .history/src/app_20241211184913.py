@@ -70,14 +70,14 @@ def learn():
     {
         'title':'Papel',
         'description':'Conoce el ciclo de reciclaje del papel, un material que puede ser reciclado varias veces',
-        'image_link':'https://i.postimg.cc/XNrjbqmp/L-paper.webp',
-        'href_to':'/learn/paper'
+        'image_link':'https://i.postimg.cc/W3J1Syw2/L-plastic.jpg',
+        'href_to':'/learn/plastic'
     },
     {
         'title':'Nocivos',
         'description':'Explora el impacto de los materiales nocivos, como baterías y pilas, en el medio ambiente.',
-        'image_link':'https://i.postimg.cc/5yhkcnGq/L-nocivo.webp',
-        'href_to':'/learn/nocivos'
+        'image_link':'https://i.postimg.cc/W3J1Syw2/L-plastic.jpg',
+        'href_to':'/learn/plastic'
     }
     ]
     return render_template('learn.html',areas=areas)
@@ -116,21 +116,7 @@ def model():
 
 @app.route('/news')
 def news():
-
-    notices=[
-    {
-        "image_url":"https://us.123rf.com/450wm/fotographic/fotographic2303/fotographic230302385/200891141-ilustraci%C3%B3n-3d-de-fondo-verde-ecol%C3%B3gico-con-hojas-y-s%C3%ADmbolo-de-reciclaje-de-metal.jpg",
-        "href_link":"https://www.eventseye.com/ferias/f-fima-feria-internacional-del-medio-ambiente-14398-3.html",
-        "name":"Feria Internacional"
-    },
-    {
-        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
-        "href_link":"#",
-        "name":"Conferencia de la vida"
-    }
-    ]
-
-    return render_template('news.html',notices=notices)
+    return render_template('news.html')
 
 @app.route('/recycle')
 def recycle():
