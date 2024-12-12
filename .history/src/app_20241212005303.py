@@ -37,6 +37,7 @@ def about():
 
 @app.route('/learn')
 def learn():
+    
     return render_template('learn.html',areas=areas)
 
 @app.route('/learn/plastic')
@@ -73,6 +74,9 @@ def model():
 
 @app.route('/news')
 def news():
+
+    
+
     return render_template('news.html',notices=notices)
 
 @app.route('/recycle')
