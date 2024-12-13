@@ -61,44 +61,101 @@ notices=[
     }
     ]
 
-
-#NOTE: Los dir deben completarse
-#
-#        {
-#            "name":"",
-#            "address":"",
-#            "phone":"",
-#            "href_link":""
-#        }
-#
 deparments=[
     {
-        "name":"Amazonas",
-        "dir":[
-        {
-            "name":"Departamento Martinet (Centro de Reciclaje)",
-            "address":"Cra 18 #40-2 - Leticia",
-            "phone":"31209846532",
-            "href_link":"https://maps.app.goo.gl/Ypqgr4EBgeNHJUYX8"
-        },
-        {
-            "name":"aaa",
-            "address":"asd",
-            "phone":"asda",
-            "href_link":"asdasdsa"
-        }
-        ]
-
+        "name":"Amazonas"
     },
     {
-        "name":"Atlantico",
-        "dir":[
-            {
-            "name":"aaa",
-            "address":"Desconocido",
-            "phone":"asda",
-            "href_link":"asdasdsa a"
-        }
-        ]
+        "name":"Antioquia"
+    },
+    {
+        "name":"Arauca"
+    },
+    {
+        "name":"Atlantico"
+    },
+    {
+        "name":"Bolivar"
+    },
+    {
+        "name":"Boyaca"
+    },
+    {
+        "name":"Caldas"
+    },
+    {
+        "name":"Caqueta"
+    },
+    {
+        "name":"Casanare"
+    },
+    {
+        "name":"Cauca"
+    },
+    {
+        "name":"Cesar"
+    },
+    {
+        "name":"Choco"
+    },
+    {
+        "name":"Cordoba"
+    },
+    {
+        "name":"Cundinamarca"
+    },
+    {
+        "name":"Guainia"
+    },
+    {
+        "name":"Guaviare"
+    },
+    {
+        "name":"Huila"
+    },
+    {
+        "name":"La_Guajira"
+    },
+    {
+        "name":"Magdalena"
+    },
+    {
+        "name":"Meta"
+    },
+    {
+        "name":"Nariño"
+    },
+    {
+        "name":"Norte_de_Santander"
+    },
+    {
+        "name":"Putumayo"
+    },
+    {
+        "name":"Quindio"
+    },
+    {
+        "name":"Risaralda"
+    },
+    {
+        "name":"San_Andres_Providencia"
+    },
+    {
+        "name":"Santander"
+    },
+    {
+        "name":"Sucre"
+    },
+    {
+        "name":"Tolima"
+    },
+    {
+        "name":"Valle_del_cauca"
+    },
+    {
+        "name":"Vaupes"
+    },
+    {
+        "name":"Vichada"
     }
 ]

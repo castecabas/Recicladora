@@ -1,16 +1,11 @@
 from ultralytics import YOLO
 import torch
-import torchvision
 import os
 
 if __name__ == '__main__':
-    os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+
     torch.cuda.is_available()
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    print("PyTorch version:", torch.__version__)
-    print("Torchvision version:", torchvision.__version__)
-    print("CUDA available:", torch.cuda.is_available())
-    print("CUDA version:", torch.version.cuda)
     print(f"Using device: {device}")
 
     logdir = "C:/Users/castecabas/Desktop/PROYECTOS/Recicladora/Scripts/trainer/runs/detect/train"  # Directorio donde se guardarán los logs de TensorBoard
@@ -43,7 +38,5 @@ if __name__ == '__main__':
         perspective=0.0005,
         mixup=0.2,
         copy_paste=0.3,
-        cache="disk",
-        save=True,
-        resume=True
+        cache=True
     )

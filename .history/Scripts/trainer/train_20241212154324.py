@@ -44,6 +44,5 @@ if __name__ == '__main__':
         mixup=0.2,
         copy_paste=0.3,
         cache="disk",
-        save=True,
-        resume=True
+        save=True
     )

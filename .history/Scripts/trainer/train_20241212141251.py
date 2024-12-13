@@ -4,7 +4,7 @@ import torchvision
 import os
 
 if __name__ == '__main__':
-    os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+
     torch.cuda.is_available()
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print("PyTorch version:", torch.__version__)
@@ -44,6 +44,5 @@ if __name__ == '__main__':
         mixup=0.2,
         copy_paste=0.3,
         cache="disk",
-        save=True,
-        resume=True
+        save=True
     )

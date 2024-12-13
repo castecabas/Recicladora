@@ -182,6 +182,7 @@ body {
 
 .main-div .direction article div .link-map {
     color: red;
+    text-decoration: underline;
 }
 
 /* MODO OSCURO */

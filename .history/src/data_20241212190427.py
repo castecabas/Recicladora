@@ -62,7 +62,7 @@ notices=[
     ]
 
 
-#NOTE: Los dir deben completarse
+#NOTE: Los dir debe completar 
 #
 #        {
 #            "name":"",
@@ -93,12 +93,7 @@ deparments=[
     {
         "name":"Atlantico",
         "dir":[
-            {
-            "name":"aaa",
-            "address":"Desconocido",
-            "phone":"asda",
-            "href_link":"asdasdsa a"
-        }
+
         ]
     }
 ]

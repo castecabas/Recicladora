@@ -100,5 +100,23 @@ deparments=[
             "href_link":"asdasdsa a"
         }
         ]
+    },
+    {
+        "name":"Sumadre",
+        "dir":[
+        {
+            "name":"Departamento Martinet (Centro de Reciclaje)",
+            "address":"Cra 18 #40-2 - Leticia",
+            "phone":"31209846532",
+            "href_link":"https://maps.app.goo.gl/Ypqgr4EBgeNHJUYX8"
+        },
+        {
+            "name":"aaa",
+            "address":"asd",
+            "phone":"asda",
+            "href_link":"asdasdsa"
+        }
+        ]
+
     }
 ]
