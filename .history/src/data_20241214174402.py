@@ -260,18 +260,6 @@ deparments=[
 
     },
     {
-        "name":"Cesar",
-        "dir":[
-        {
-            "name":"COORECIPROS",
-            "address":"Cl. 21 #18d7",
-            "city":"Valledupar",
-            "info":"3135092121"
-        }
-        ]
-
-    },
-    {
         "name":"Cordoba",
         "dir":[
         {
@@ -347,42 +335,6 @@ deparments=[
             "info":"Desconocido"
         }
         ]
-    },
-    {
-        "name":"Magdalena",
-        "dir":[
-        {
-            "name":"Recicladora Luifer",
-            "address":"Cra. 10 #9A-07, Comuna 3",
-            "city":"Santa Marta",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Asociación de recicladores Eco Aprovechables por el Medio Ambiente",
-            "address":"calle 2, Vía Alterna al Puerto #12 42",
-            "city":"Santa Marta",
-            "info":"3187647212"
-        },
-        {
-            "name":"RECYCK",
-            "address":"Olaya Herrera calle 31d",
-            "city":"Cartagena",
-            "info":"3162466262"
-        },
-        {
-            "name":"COVEXIN S.A.S",
-            "address":"Tv 45A, El Refugio",
-            "city":"Cartagena",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Reciclajes Sf",
-            "address":"55a126 Cl. 31d",
-            "city":"Cartagena",
-            "info":"Desconocido"
-        }
-        ]
-
     },
     {
         "name":"Nariño",

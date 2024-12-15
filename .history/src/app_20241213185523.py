@@ -81,11 +81,11 @@ def recycle():
 
 @app.route('/recycle/recicla')
 def recicla():
-    return render_template('/recycle_pages/recicla.html',deparments=deparments)
+    return render_template('/recycle_pages/recicla.html',deparments=deparments,materials=materials)
 
 @app.route('/recycle/reuse')
 def reuse():
-    return render_template('/recycle_pages/reuse.html',materials=materials)
+    return render_template('/recycle_pages/reuse.html')
 
 @app.route('/recycle/solidarity')
 def solidarity():

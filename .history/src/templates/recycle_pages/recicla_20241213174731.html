@@ -51,10 +51,11 @@
                         {% for direction in department.dir %}
                         <div class="item">
                             <p>{{ direction.name }}</p>
-                            <p>{{ direction.city }}</p>
                             <p>{{ direction.address }}</p>
-                            <p>{{ direction.info }}</p>
-                            
+                            <p>{{ direction.phone }}</p>
+                            {% if direction.href_link %}
+                            <a class="link-map" href="{{ direction.href_link }}" target="_blank">Ir a Maps</a>
+                            {% endif %}
                         </div>
                         {% endfor %}
                     </div>
@@ -63,8 +64,7 @@
             </section>
 
             <br>
-            <iframe 
-                src="https://www.google.com/maps/d/u/1/embed?mid=1__EQl8kpuj3iGXtKCa3mTYxPCgjjZag&ehbc=2E312F"
+            <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1__EQl8kpuj3iGXtKCa3mTYxPCgjjZag&ehbc=2E312F"
                 width="90%" height="480" style="border-radius: 20px;"
                 title="cuadro de los lugares de reciclaje"></iframe>
             <br>

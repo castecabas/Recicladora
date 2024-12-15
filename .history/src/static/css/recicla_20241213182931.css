@@ -176,10 +176,15 @@ body {
     background-color: #FFEFBC;
 }
 
+@media(max-width:375px){
+    .direction article div div.item{
+        position: relative;
+        width: 100%;
+    }
+}
 
 .main-div .direction article div div.item p{
     margin: 8px 0px 8px 0px;
-    word-break: break-all;
 }
 
 .main-div .direction article div .link-map {

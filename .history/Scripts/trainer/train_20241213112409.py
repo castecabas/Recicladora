@@ -43,7 +43,7 @@ if __name__ == '__main__':
         perspective=0.0005,
         mixup=0.2,
         copy_paste=0.3,
-        cache=True,
+        cache="disk",
         save=True,
         resume=True
     )

@@ -194,18 +194,6 @@ deparments=[
 
     },
     {
-        "name":"Atlantico",
-        "dir":[
-        {
-            "name":"ASOCIACION DE RESICLADORES B/QUILLA PUERTA DE ORO",
-            "address":"Cra. 2 #30-21 Local 1",
-            "city":"Barranquilla",
-            "info":"3215076349"
-        }
-        ]
-
-    },
-    {
         "name":"Boyacá",
         "dir":[
         {
@@ -230,7 +218,7 @@ deparments=[
             "name":"Asociación de Recicladores de Boyacá 'RECIBOY'",
             "address":"carrera 11#3-64",
             "city":"Tunja",
-            "info":"3214006716"
+            "info":""
         }
         ]
 
@@ -260,55 +248,6 @@ deparments=[
 
     },
     {
-        "name":"Cesar",
-        "dir":[
-        {
-            "name":"COORECIPROS",
-            "address":"Cl. 21 #18d7",
-            "city":"Valledupar",
-            "info":"3135092121"
-        }
-        ]
-
-    },
-    {
-        "name":"Cordoba",
-        "dir":[
-        {
-            "name":"Recicladora Eco Chispa",
-            "address":"Buena Vista, Cra. 3 #N° 15-51",
-            "city":"Monteria",
-            "info":"3024468993"
-        },
-        {
-            "name":"Recuperar Sp/Sl",
-            "address":"Transversal 5 Diagonal 8",
-            "city":"Monteria",
-            "info":"3017805350"
-        },
-        {
-            "name":"Recicladora Los Araujos",
-            "address":"Cra. 8f #5-83, Alfonso Lopez",
-            "city":"Monteria",
-            "info":"3106362413"
-        },
-        {
-            "name":"Recicladora El Puente Metalico",
-            "address":"Cl. 20 #N° 2-15, Chuchurubi",
-            "city":"Monteria",
-            "info":"3147959065"
-        },
-        {
-            "name":"Recicladora Metals",
-            "address":"Cra 24c  calle 11",
-            "city":"Monteria",
-            "info":"Desconocido"
-        }
-        
-        ]
-
-    },
-    {
         "name":"Cundinamarca",
         "dir":[
         {
@@ -324,65 +263,6 @@ deparments=[
             "info":"fundacionpuntosverdes.com/puntos-de-recoleccion/"
         }
         ]
-    },
-    {
-        "name":"Huila",
-        "dir":[
-        {
-            "name":"Recicladora fénix",
-            "address":"Cl. 26 Sur #5 63",
-            "city":"Neiva",
-            "info":"3002428688"
-        },
-        {
-            "name":"Recuperar del Huila",
-            "address":"Cl 25 A #1d-246",
-            "city":"Neiva",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Reciclaje Ruiz",
-            "address":"Palermo",
-            "city":"Neiva",
-            "info":"Desconocido"
-        }
-        ]
-    },
-    {
-        "name":"Magdalena",
-        "dir":[
-        {
-            "name":"Recicladora Luifer",
-            "address":"Cra. 10 #9A-07, Comuna 3",
-            "city":"Santa Marta",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Asociación de recicladores Eco Aprovechables por el Medio Ambiente",
-            "address":"calle 2, Vía Alterna al Puerto #12 42",
-            "city":"Santa Marta",
-            "info":"3187647212"
-        },
-        {
-            "name":"RECYCK",
-            "address":"Olaya Herrera calle 31d",
-            "city":"Cartagena",
-            "info":"3162466262"
-        },
-        {
-            "name":"COVEXIN S.A.S",
-            "address":"Tv 45A, El Refugio",
-            "city":"Cartagena",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Reciclajes Sf",
-            "address":"55a126 Cl. 31d",
-            "city":"Cartagena",
-            "info":"Desconocido"
-        }
-        ]
-
     },
     {
         "name":"Nariño",
