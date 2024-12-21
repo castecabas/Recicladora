@@ -21,7 +21,7 @@ app.config['MAIL_PASSWORD'] = 'bllqzryutqqmmcdh'
 
 mail = Mail(app)
 
-yolo_model = YOLOModel('src/model/best.pt')
+yolo_model = YOLOModel('src/model/best_yolov11.pt')
 camera = Camera()
 
 # RUTAS

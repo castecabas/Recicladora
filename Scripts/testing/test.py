@@ -2,8 +2,8 @@
 from ultralytics import YOLO
 
 
-model = YOLO("C:/Users/castecabas/PycharmProjects/Recycler_Proyect/S_Training/runs/detect/train6/weights/best.pt")
+model = YOLO("C:/Users/castecabas/Desktop/PROYECTOS/Recicladora/Scripts/trainer/runs/detect/train2/weights/last.pt")
 
-results= model.predict(source="0",show=True,imgsz=640,conf=0.5)
+results= model.predict(source="1",show=True,imgsz=640,conf=0.5)
 
 print(results)

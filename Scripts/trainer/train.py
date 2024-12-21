@@ -5,6 +5,8 @@ import os
 
 if __name__ == '__main__':
     os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+    torch.cuda.empty_cache()
+    torch.cuda.reset_peak_memory_stats()
     torch.cuda.is_available()
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print("PyTorch version:", torch.__version__)
@@ -21,11 +23,11 @@ if __name__ == '__main__':
 
     model.train(
         data="C:/Users/castecabas/Desktop/PROYECTOS/Recicladora/Dataset/dataset.yaml", #colocar su Data.yaml
-        batch=8,
+        batch=6,
         imgsz=640,
         workers=6,
-        epochs=500,
-        patience=100,
+        epochs=200,
+        patience=30,
         optimizer="AdamW",
         augment=True,
         dropout=0.2,
@@ -41,9 +43,10 @@ if __name__ == '__main__':
         shear=10,
         flipud=0.1,
         perspective=0.0005,
-        mixup=0.2,
-        copy_paste=0.3,
-        cache=True,
+        mixup=0.1,
+        copy_paste=0.2,
+        cache='disk',
         save=True,
+        save_period=10,
         resume=True
     )

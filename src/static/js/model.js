@@ -1,6 +1,15 @@
 let currentCameraIndex = 0;
 let cameras = [];
-const clsname = ['Biodegradable', 'Carton', 'Vidrio', 'Metal', 'Papel', 'Plastico'];
+const clsname = [
+    "Comida", "Planta", "Fruta o Verdura", "Base de Carton", "Caja de Carton", 
+    "Contenedor de Carton", "Forma de Carton", "Botella de Vidrio", "Vajilla de Vidrio", 
+    "Fragmentos de Vidrio", "Frasco de Vidrio", "Jarra de Vidrio", "Aluminio", 
+    "Contenedor Metalico", "Latas de Alimento", "Menaje Metalico", "Metal Menor", 
+    "Utensilio Metalico", "Bateria o Pila", "Carta de Papel", "Recibo o Factura", 
+    "Periodico o Revista", "Forma de Papel", "Papel de Higiene", "Bolsa de Plastico", 
+    "Botella de Plastico", "Contenedor de Plastico", "Envase de Plastico", 
+    "Vajilla de Plastico", "Tapa de Plastico", "Utensilio de Plastico"
+  ];
 let confidenceThreshold = 0.5;
 
 const parrafo = document.getElementById("confidenceValue");
