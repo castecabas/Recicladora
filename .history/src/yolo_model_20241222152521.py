@@ -31,6 +31,7 @@ class YOLOModel:
         # Calcular el grosor dinámico para el bounding box
         box_width = x2 - x1
         box_height = y2 - y1
+        add_thickness= 0.2
         thickness = max(1, int(min(box_width, box_height) / 50)) # Ajuste dinámico para el grosor del bounding box
         
         # Calcular el tamaño del texto (font_scale) dinámicamente basado en el tamaño del bounding box

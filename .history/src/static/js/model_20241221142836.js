@@ -110,6 +110,7 @@ function updateDetectionsList(detections) {
     detections.forEach(detection => {
         const [x1, y1, x2, y2, conf, cls] = detection;
         const li = document.createElement('li');
+        li.classList.add(className.toLowerCase());
         li.textContent = `Clase: ${clsname[cls] || 'Desconocido'}, Confianza: ${conf.toFixed(2) * 100} %`;
         list.appendChild(li);
     });

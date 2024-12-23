@@ -31,6 +31,7 @@ class YOLOModel:
         # Calcular el grosor dinámico para el bounding box
         box_width = x2 - x1
         box_height = y2 - y1
+        add_thickness= 0.2
         thickness = max(1, int(min(box_width, box_height) / 50)) # Ajuste dinámico para el grosor del bounding box
         
         # Calcular el tamaño del texto (font_scale) dinámicamente basado en el tamaño del bounding box
@@ -45,7 +46,7 @@ class YOLOModel:
         color_bgr = (color[2], color[1], color[0])  # Convertir RGB a BGR
 
         # Dibujar el bounding box con grosor dinámico
-        cv2.rectangle(image, (int(x1), int(y1)), (int(x2), int(y2)), color_bgr, thickness)
+        cv2.rectangle(image, (int(x1), int(y1)), (int(x2), int(y2)), color_bgr, (thickness+add_thickness))
 
         # Calcular la posición del texto asegurándose que no se salga de la imagen
         text = f"{self.model.names[int(cls)]} : {conf:.2f}"

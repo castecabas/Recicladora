@@ -82,8 +82,8 @@ main div #resultImage {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-@media(max-width:638px) {
-    main div #resultImage {
+@media(max-width:638px){
+    main div #resultImage{
         border-radius: 0;
         box-shadow: none;
     }
@@ -104,15 +104,15 @@ main div #fileInput:hover {
     background-color: #219121;
 }
 
-main div ul#detectionsList {
+main div ul#detectionsList{
     overflow-y: auto;
     max-height: 200px;
     width: 90vw;
     max-width: 634px;
-
+    
 }
 
-main div ul#detectionsList li {
+main div ul#detectionsList li{
     font-size: large;
 }
 
@@ -157,17 +157,10 @@ main div ul#detectionsList li {
     z-index: 101;
 }
 
-.aside img.aside_logo {
+.aside img {
     aspect-ratio: 1/1;
-    max-width: 100px;
+    max-width: 150px;
 }
-
-@media(max-height:850px) {
-    .aside img.aside_logo {
-        display: none;
-    }
-}
-
 
 .aside h1 {
     color: #2AB52A;
@@ -223,7 +216,7 @@ main div ul#detectionsList li {
     left: 50%;
     transform: translateX(-25%);
     transition: opacity 0.3s ease-in-out;
-
+    
     /* Transición suave */
     z-index: 9000;
 }
@@ -242,8 +235,7 @@ main div ul#detectionsList li {
 }
 
 /* Mostrar el tooltip al pasar el ratón sobre la imagen */
-.tooltip-container:active .tooltip-text,
-.tooltip-container:hover .tooltip-text {
+.tooltip-container:active .tooltip-text ,.tooltip-container:hover .tooltip-text{
     opacity: 1;
     animation: hideTooltip 18s forwards;
     /* Inicia la animación para ocultarlo después de 3 segundos */
@@ -270,9 +262,16 @@ main div ul#detectionsList li {
     background-color: white;
 }
 
+.aside .colors{
+    line-height: 5px;
+    font-size: small;
+}
 
-.aside .colors li {
-    list-style: none;
+.aside .colors li::marker {
+    content: '•'; /* Definir el tipo de marcador */
+    color: #2AB52A; /* Cambiar el color del marcador */
+    font-size: 40px; /* Cambiar el tamaño del marcador */
+    margin-right: 10px; /* Espacio entre el marcador y el texto */
 }
 
 
@@ -318,63 +317,6 @@ label#fileinputlabel:hover {
     cursor: pointer;
     background-color: #2AB52A;
 }
-
-div.colors {
-
-
-    padding: 5px;
-
-    label {
-        font-weight: bold;
-    }
-
-    ul {
-        margin: 0;
-        padding: 5px 25px 5px 25px;
-        border-radius: 10px;
-        background: rgba(0, 0, 20, 0.911);
-        max-width: max-content;
-        position: relative;
-        justify-content: center;
-
-        li {
-            list-style-type: none;
-            font-weight: 600;
-            line-break: anywhere;
-
-        }
-    }
-
-
-    .bio {
-        color: #00cc66;
-    }
-
-    .cardb {
-        color: #996633;
-    }
-
-    .glass {
-        color: #0080ff;
-    }
-
-    .metal {
-        color: #c0c0c0;
-    }
-
-    .noxios {
-        color: #ff3333;
-    }
-
-    .paper {
-        color: #ffff66;
-    }
-
-    .plastic {
-        color: #ff8000;
-    }
-}
-
 
 /* MODO OSCURO */
 

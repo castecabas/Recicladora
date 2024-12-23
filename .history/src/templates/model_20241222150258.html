@@ -13,7 +13,7 @@
     <span class="btn_openmenu" onclick="openNav()">&#9776; Menu</span><br><br>
     <nav class="aside" id="aside">
         <div class="overlay"></div>
-        <img class="aside_logo" src="https://i.postimg.cc/gk7MpWkm/logo.webp">
+        <img src="https://i.postimg.cc/gk7MpWkm/logo.webp">
         <h1 style="text-decoration: underline;">Opciones</h1>
 
         <label for="confidenceThreshold">
@@ -21,23 +21,28 @@
                 <img class="logo_x"
                     src="https://images.vexels.com/media/users/3/152347/isolated/preview/27304b9b14ce9bd8a28ca637ed92070e-icono-de-signo-de-interrogacion-de-circulo-azul.png"
                     alt="Ayuda">
-                <span class="tooltip-text">Es la probabilidad que determina en las predicciones,si es alto es más
-                    confiable, aunque puede omitir objetos al no cumplir dicho porcentaje. Si es bajo, será menos
-                    confiable, pero detectará aún más.</span>
+                <span class="tooltip-text">Es la probabilidad que determina en las predicciones,si es alto es más confiable, aunque puede omitir objetos al no cumplir dicho porcentaje. Si es bajo, será menos confiable, pero detectará aún más.</span>
             </span>
             Umbral de Confianza:
         </label>
         <input type="range" id="confidenceThreshold" min="0.1" max="0.8" step="0.01" value="0.5">
         <span id="confidenceValue" style="color: white;">0.5</span>
-
-        <label for="SwitchCamera">Camara</label>
+        <h1>Colores</h1>
+        <ul class="colors">
+            <li>Biodegradable</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <h1 for="SwitchCamera">Camara</h1>
         <button id="switchCameraBtn">Cambiar de dispositivo</button>
         </a>
-        <label class="nav-link-aside" for="darkModeToggle"><input type="checkbox" class="btn_darkmode"
-                id="darkModeToggle" hidden>
+        <label class="nav-link-aside" for="darkModeToggle"><input type="checkbox" class="btn_darkmode" id="darkModeToggle" hidden>
             Modo Oscuro</label>
         <br>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Cerrar Menú</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Cerrar Pestaña</a>
         <a href="{{ url_for('index') }}" class="nav-link">Ir a Inicio</a>
     </nav>
 
@@ -46,7 +51,7 @@
             <div>
                 <div>
                     <p>Camara Actual: <span id="currentCamera"></span><br>
-                        (Aceptar Permisos de la CAMARA y recarga la pagina)</p>
+                    (Aceptar Permisos de la CAMARA y recarga la pagina)</p>
                     <video id="video" width="640" height="480" autoplay></video><br>
                     <button id="captureBtn">Capturar</button>
                     <p>O</p>
@@ -60,18 +65,6 @@
             <div>
                 <h3>Detecciones:</h3>
                 <ul id="detectionsList"></ul>
-            </div>
-            <div class="colors">
-                <h3>Colores</h3>
-                <ul>
-                    <li class="bio">Biodegradable &#10143; Comida, Planta, Fruta, Verdura</li>
-                    <li class="cardb">Cartón &#10143; Rollo, Caja, Contenedor, Plancha</li>
-                    <li class="glass">Vidrio &#10143; Botella, Vajilla, Frasco</li>
-                    <li class="metal">Metal &#10143; Aluminio, Lata, Menaje, Utensilio</li>
-                    <li class="noxios">Nocivos &#10143; Bateria, Pila</li>
-                    <li class="paper">Papel &#10143; Carta, Factura, Periodico, Servilleta</li>
-                    <li class="plastic">Plastico &#10143; Bolsa, Botella, Vajilla, Tapa, Utensilio</li>
-                </ul>
             </div>
         </main>
         {% include 'components/footer.html' %}

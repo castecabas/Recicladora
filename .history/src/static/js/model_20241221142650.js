@@ -110,10 +110,16 @@ function updateDetectionsList(detections) {
     detections.forEach(detection => {
         const [x1, y1, x2, y2, conf, cls] = detection;
         const li = document.createElement('li');
-        li.textContent = `Clase: ${clsname[cls] || 'Desconocido'}, Confianza: ${conf.toFixed(2) * 100} %`;
+
+        // Obtener el nombre de la clase
+        const className = clsname[cls] || 'Desconocido';
+
+        li.classList.add(className.toLowerCase());  // Usamos .toLowerCase() para asegurar que la clase sea en minúsculas
+        li.textContent = `Clase: ${className}, Confianza: ${(conf.toFixed(2) * 100)} %`;
         list.appendChild(li);
     });
 }
+
 
 async function initializeCamera() {
     try {

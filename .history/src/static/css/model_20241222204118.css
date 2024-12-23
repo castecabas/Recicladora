@@ -330,17 +330,15 @@ div.colors {
 
     ul {
         margin: 0;
-        padding: 5px 25px 5px 25px;
         border-radius: 10px;
-        background: rgba(0, 0, 20, 0.911);
-        max-width: max-content;
+        background: rgba(51, 51, 51,0.8);
+        width: 50vw;
         position: relative;
         justify-content: center;
 
         li {
             list-style-type: none;
             font-weight: 600;
-            line-break: anywhere;
 
         }
     }

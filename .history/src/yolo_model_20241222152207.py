@@ -31,14 +31,14 @@ class YOLOModel:
         # Calcular el grosor dinámico para el bounding box
         box_width = x2 - x1
         box_height = y2 - y1
-        thickness = max(1, int(min(box_width, box_height) / 50)) # Ajuste dinámico para el grosor del bounding box
+        thickness = max(1, int(min(box_width, box_height) / 50))  # Ajuste dinámico para el grosor del bounding box
         
         # Calcular el tamaño del texto (font_scale) dinámicamente basado en el tamaño del bounding box
         font_scale = min(box_width, box_height) / 200  # Ajuste del tamaño del texto en función del tamaño del bounding box
         font_scale = max(0.5, min(font_scale, 1))  # Limitar el tamaño de fuente para que no sea demasiado grande
 
         # Calcular el grosor del texto dinámicamente
-        text_thickness = max(1, int(thickness / 2))  # Grosor del texto en función del grosor del bounding box
+        text_thickness = max(1, int(thickness / 2))+0.1  # Grosor del texto en función del grosor del bounding box
         
         # Calcular color del bounding box y texto (convertir de RGB a BGR)
         color = self.colors[int(cls) % len(self.colors)]

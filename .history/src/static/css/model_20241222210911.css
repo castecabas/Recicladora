@@ -332,7 +332,7 @@ div.colors {
         margin: 0;
         padding: 5px 25px 5px 25px;
         border-radius: 10px;
-        background: rgba(0, 0, 20, 0.911);
+        background: rgba(0, 0, 0, 0.85);
         max-width: max-content;
         position: relative;
         justify-content: center;
