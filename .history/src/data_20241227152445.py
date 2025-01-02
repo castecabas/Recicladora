@@ -53,11 +53,6 @@ notices=[
         "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
         "href_link":"https://exporesiduos.com.co",
         "name":"Feria y Seminario Exporesiduos"
-    },
-    {
-        "image_url":"https://www.leonardo-gr.com/wp-content/uploads/2022/05/residuo.jpg",
-        "href_link":"https://www.olores.org/es/noticias/conferencias-y-otros-eventos/1390-i-congreso-internacional-gestion-ambiental-de-olores-colombia-2025",
-        "name":"I Congreso Internacional Gestión Ambiental de Olores"
     }
     ]
 

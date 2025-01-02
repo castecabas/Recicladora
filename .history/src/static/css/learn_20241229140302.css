@@ -133,7 +133,3 @@ body.dark-mode h1 {
 body.dark-mode span {
   color: white;
 }
-
-body.dark-mode .item-grid{
-  border: 1px solid rgb(136, 136, 136);
-}

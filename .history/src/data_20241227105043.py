@@ -47,17 +47,17 @@ notices=[
     {
         "image_url":"https://us.123rf.com/450wm/fotographic/fotographic2303/fotographic230302385/200891141-ilustraci%C3%B3n-3d-de-fondo-verde-ecol%C3%B3gico-con-hojas-y-s%C3%ADmbolo-de-reciclaje-de-metal.jpg",
         "href_link":"https://www.eventseye.com/ferias/f-fima-feria-internacional-del-medio-ambiente-14398-3.html",
-        "name":"Feria Internacional del medio ambiente"
+        "name":"Feria Internacional"
     },
     {
         "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
-        "href_link":"https://exporesiduos.com.co",
-        "name":"Feria y Seminario Exporesiduos"
+        "href_link":"#",
+        "name":"Conferencia de la vida"
     },
     {
-        "image_url":"https://www.leonardo-gr.com/wp-content/uploads/2022/05/residuo.jpg",
-        "href_link":"https://www.olores.org/es/noticias/conferencias-y-otros-eventos/1390-i-congreso-internacional-gestion-ambiental-de-olores-colombia-2025",
-        "name":"I Congreso Internacional Gestión Ambiental de Olores"
+        "image_url":"https://image.slidesdocs.com/responsive-images/background/vibrant-green-leaf-recycling-symbol-3d-rendered-on-a-wooden-table-with-a-softly-focused-backdrop-powerpoint-background_47cd35bc2a__960_540.jpg",
+        "href_link":"#",
+        "name":"Conferencia de la vida"
     }
     ]
 

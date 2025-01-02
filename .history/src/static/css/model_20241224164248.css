@@ -87,7 +87,11 @@ main div #resultImage {
         border-radius: 0;
         box-shadow: none;
     }
-
+    main div.colors{
+        position: relative;
+        width: 100vw;
+        border-radius: 0;
+    }
 }
 
 main div #captureBtn,
@@ -191,7 +195,7 @@ main div ul#detectionsList li {
 
 .aside .logo_x {
     position: relative;
-    padding: 0 8px 0 0;
+    padding-left: 0px;
     margin: 0px;
     aspect-ratio: 1/1;
     height: 20px;
@@ -320,7 +324,7 @@ label#fileinputlabel:hover {
     background-color: #2AB52A;
 }
 
-body div.colors {
+div.colors {
 
 
     padding: 5px;
@@ -331,7 +335,7 @@ body div.colors {
 
     ul {
         margin: 0;
-        padding: 5px 50px 5px 50px;
+        padding: 5px 25px 5px 25px;
         border-radius: 10px;
         background: rgba(0, 0, 20, 0.911);
         max-width: max-content;
@@ -383,10 +387,6 @@ body.dark-mode {
     background-color: #000014;
 }
 
-body.dark-mode h5{
-    color:white ;
-}
-
 body.dark-mode #video {
     border: 1px outset white;
 }
@@ -399,9 +399,4 @@ body.dark-mode .container h3 {
 body.dark-mode .container p,
 body.dark-mode .container ul#detectionsList li {
     color: white;
-}
-
-body.dark-mode div.colors ul{
-    border: 1px solid white;
-    border-radius: 10px;
 }

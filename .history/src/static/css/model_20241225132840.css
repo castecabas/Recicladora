@@ -191,7 +191,7 @@ main div ul#detectionsList li {
 
 .aside .logo_x {
     position: relative;
-    padding: 0 8px 0 0;
+    padding-left: 0px;
     margin: 0px;
     aspect-ratio: 1/1;
     height: 20px;
@@ -381,10 +381,6 @@ body div.colors {
 
 body.dark-mode {
     background-color: #000014;
-}
-
-body.dark-mode h5{
-    color:white ;
 }
 
 body.dark-mode #video {
