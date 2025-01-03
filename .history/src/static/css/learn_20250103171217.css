@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box; /* Asegura que el padding no expanda el ancho de los elementos */
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: var(--blanco-pagina);
+}
+
+.main-div h1 {
+  color: #009a00;
+  font-size: 500%;
+  text-shadow: -2px -2px 0 var(--verde-900), -2px 2px 0 var(--verde-900), 2px -2px 0 var(--verde-900),
+    2px 2px 0 var(--verde-900);
+  margin-bottom: 25px;
+}
+
+.main-div span {
+  color: #383838;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 90vw;
+}
+
+/* Item styling */
+.item-grid {
+  position: relative; /* Para posicionar correctamente el overlay */
+  width: 100%;
+  aspect-ratio: 1; /* Cuadrado */
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  max-height: 150px;
+  border: 1px solid black;
+}
+
+/* Overlay styling */
+.item-grid .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-intensidad);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Title and paragraph */
+.item-title,
+.item-paragraph {
+  position: relative;
+  z-index: 2;
+  margin: 5px 0;
+}
+
+.item-title {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #fcf700;
+  text-decoration: none;
+}
+
+.item-title:hover {
+  color: #cfd300;
+}
+
+.item-paragraph {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 950px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MODO OSCURO */
+
+body.dark-mode {
+  background-color: #000014;
+  color: #ffffff;
+}
+
+body.dark-mode h1 {
+  text-shadow: -2px -2px 0 var(--verde-900), -2px 2px 0 var(--verde-900), 2px -2px 0 var(--verde-900),
+    2px 2px 0 var(--verde-900);
+}
+
+body.dark-mode span {
+  color: white;
+}
+
+body.dark-mode .item-grid{
+  border: 1px solid rgb(136, 136, 136);
+}

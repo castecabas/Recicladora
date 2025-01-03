@@ -1,0 +1,23 @@
+:root{
+    --blanco-pagina:#fafafa;
+    --overlay-intensidad:rgba(0,0,0,1);
+
+    --verde-50:#f1fdf0;
+    --verde-100:#ddfcdc;
+    --verde-200:#baf8ba;
+    --verde-300:#72ee72;
+    --verde-400:#48e049;
+    --verde-500:#20c721;
+    --verde-600:#14a516;
+    --verde-700:#148116;
+    --verde-800:#156617;
+    --verde-900:#135415;
+    --negro-950:#052e07;
+
+    /* MODO OSCURO PALETA*/
+    --dark-blue:#000014;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+  }
