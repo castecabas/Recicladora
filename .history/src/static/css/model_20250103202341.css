@@ -19,9 +19,9 @@ main {
     font-size: 20px;
     cursor: pointer;
     position: fixed;
+    background-color: white;
     border-radius: 4px;
-    border: 1px solid var(--verde-700);
-    color: var(--verde-700);
+    border: 1px solid black;
     margin: 25px;
     padding: 4px;
     padding-right: 15px;
@@ -30,7 +30,7 @@ main {
 }
 
 .btn_openmenu:hover {
-    background-color: var(--verde-100);
+    background-color: #d1d1d1;
 }
 
 .container {
@@ -72,6 +72,11 @@ main div #video {
     padding: 0;
 }
 
+@media(max-width:320px){
+    main div #video{
+
+    }
+}
 
 main div #resultImage {
     border-radius: 20px;
@@ -84,11 +89,6 @@ main div #resultImage {
 }
 
 @media(max-width:638px) {
-
-    main div #video{
-        border-radius: 0;
-    }
-
     main div #resultImage {
         border-radius: 0;
         box-shadow: none;
@@ -409,15 +409,6 @@ body div.colors {
 
 body.dark-mode {
     background-color: var(--dark-blue);
-}
-
-body.dark-mode .btn_openmenu{
-    border: 1px solid var(--verde-500);
-    color: var(--verde-500);
-}
-
-body.dark-mode .btn_openmenu:hover{
-    background-color: var(--verde-50);
 }
 
 body.dark-mode h5{

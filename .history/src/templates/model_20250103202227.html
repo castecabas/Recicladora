@@ -38,7 +38,6 @@
                 id="darkModeToggle" hidden>
             Modo Oscuro</label>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Cerrar Menú</a>
-        <br>
         <a href="{{ url_for('index') }}" class="nav-link">Ir a Inicio</a>
     </nav>
 
@@ -48,7 +47,7 @@
                 <div>
                     <p>Camara Actual: <span id="currentCamera"></span></p>
                         <h5>(Aceptar Permisos de la CAMARA y recarga la pagina)</h5>
-                    <video id="video" autoplay></video><br>
+                    <video id="video" width="640" height="480" autoplay></video><br>
                     <button id="captureBtn">Capturar Camara</button>
                     <p>O</p>
                     <input type="file" id="fileInput" hidden accept="image/*,video/*">

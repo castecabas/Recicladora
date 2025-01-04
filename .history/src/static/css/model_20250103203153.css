@@ -416,10 +416,6 @@ body.dark-mode .btn_openmenu{
     color: var(--verde-500);
 }
 
-body.dark-mode .btn_openmenu:hover{
-    background-color: var(--verde-50);
-}
-
 body.dark-mode h5{
     color:white ;
 }

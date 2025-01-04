@@ -151,13 +151,13 @@ body {
 }
 
 div.contacto form input#Enviar {
-  background-color: var(--verde-400);
+  background-color: var(--verde-500);
   font-weight: 700;
   color: var(--negro-950);
 }
 
 div.contacto form input#Enviar:hover {
-  background-color: var(--verde-500);
+  background-color: var(--verde-700);
   cursor: pointer;
 }
 

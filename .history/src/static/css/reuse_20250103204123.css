@@ -154,11 +154,11 @@ body.dark-mode {
 }
 
 body.dark-mode .main-div article .toggle-button {
-  border-bottom: 1px solid #b9b9b9;
+  border-bottom: 1px solid white;
 }
 
 body.dark-mode .main-div article {
-  border: 1px solid #b9b9b9;
+  border: 1px solid #808080;
 }
 
 body.dark-mode .main-div article .toggle-content .item-content a.txt {

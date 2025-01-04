@@ -30,7 +30,7 @@ main {
 }
 
 .btn_openmenu:hover {
-    background-color: var(--verde-100);
+    background-color: var(--verde-200);
 }
 
 .container {
@@ -409,15 +409,6 @@ body div.colors {
 
 body.dark-mode {
     background-color: var(--dark-blue);
-}
-
-body.dark-mode .btn_openmenu{
-    border: 1px solid var(--verde-500);
-    color: var(--verde-500);
-}
-
-body.dark-mode .btn_openmenu:hover{
-    background-color: var(--verde-50);
 }
 
 body.dark-mode h5{
