@@ -542,34 +542,6 @@ deparments=[
         ]
     },
     {
-        "name":"Caqueta",
-        "dir":[
-        {
-            "name":"Proambiental",
-            "address":"a 4-81,, Cl. 14 #4-1",
-            "city":"Florencia",
-            "info":"Desconocido"
-        },
-        {
-            "name":"ASREPRO",
-            "address":"Cra. 7 #12-17",
-            "city":"Florencia",
-            "info":"3184168504"
-        }
-        ]
-    },
-    {
-        "name":"Casanare",
-        "dir":[
-        {
-            "name":"Recicladora Mundo Limpio Sas",
-            "address":"Cl. 9",
-            "city":"Aguazul",
-            "info":"3125442953 - 3208180248"
-        }
-        ]
-    },
-    {
         "name":"Cauca",
         "dir":[
         {

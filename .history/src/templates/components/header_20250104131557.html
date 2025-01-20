@@ -1,4 +1,4 @@
-<header>
+<header class="border">
   <style>
     body {
       transition: all 0.15s ease-in;
@@ -12,7 +12,13 @@
       align-items: center;
       padding: 10px;
       background-color: white;
-      border-bottom: 1px solid #f3f3f3;
+    }
+
+    .border {
+      border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%,#3acfd5 0%) 1;
+      border-width: 1px;
+      border-style: solid;
+      padding: 5px;
     }
 
     .logo {
@@ -64,7 +70,7 @@
         rgba(11, 0, 34, 1) 8%,
         rgba(0, 0, 22, 1) 100%
       );
-      border-bottom: 1px solid #000030;
+      border-bottom: 1px solid #686868;
     }
 
     body.dark-mode header .navbar a,

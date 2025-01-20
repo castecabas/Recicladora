@@ -38,7 +38,6 @@ body {
 
 .main-div span {
   font-size: large;
-  font-weight: bold;
 }
 
 .main-div section {
@@ -84,10 +83,6 @@ body {
   background-color: #fffc4a;
 }
 
-.main-div article div.btn_4 {
-  background-color: #4aff77;
-}
-
 .main-div article .toggle-button label {
   color: black;
 }
@@ -131,7 +126,7 @@ body {
   background-repeat: no-repeat;
   object-fit: contain;
   align-self: center;
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+  box-shadow: 10px 5px 5px black;
 }
 
 .main-div article .toggle-content .item-content .logo-ytb {

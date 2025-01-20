@@ -366,12 +366,6 @@ deparments=[
             "address":"Cra. 30a # 20 - 80, Marinilla",
             "city":"Medellin",
             "info":"(604)3223462 - ciclototal.co"
-        },
-        {
-            "name":"COPROFERCOL S.A.S",
-            "address":"Barrio La Planta, Cl. 128 Sur #57-09",
-            "city":"Caldas",
-            "info":"(604)4875101 - coprofercol.com"
         }
         ]
 
@@ -508,66 +502,9 @@ deparments=[
             "address":"carrera 11#3-64",
             "city":"Tunja",
             "info":"3214006716"
-        },
-        {
-            "name":"RECIPLANET",
-            "address":"Cl. 12 #20 37",
-            "city":"Sogamoso",
-            "info":"3209180292 - reciplanetesp.com"
-        },
-        {
-            "name":"Reciclatorres",
-            "address":"Cra. 5 #7 195",
-            "city":"Tunja",
-            "info":"3115032952 - reciclatorres.com"
         }
         ]
 
-    },
-    {
-        "name":"Caldas",
-        "dir":[
-        {
-            "name":"Reciclar S. A.",
-            "address":"Cl. 22 #1452",
-            "city":"Manizales",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Ecoloma",
-            "address":"Cl. 49 # 8 - 16",
-            "city":"Manizales",
-            "info":"3135816340"
-        }
-        ]
-    },
-    {
-        "name":"Caqueta",
-        "dir":[
-        {
-            "name":"Proambiental",
-            "address":"a 4-81,, Cl. 14 #4-1",
-            "city":"Florencia",
-            "info":"Desconocido"
-        },
-        {
-            "name":"ASREPRO",
-            "address":"Cra. 7 #12-17",
-            "city":"Florencia",
-            "info":"3184168504"
-        }
-        ]
-    },
-    {
-        "name":"Casanare",
-        "dir":[
-        {
-            "name":"Recicladora Mundo Limpio Sas",
-            "address":"Cl. 9",
-            "city":"Aguazul",
-            "info":"3125442953 - 3208180248"
-        }
-        ]
     },
     {
         "name":"Cauca",

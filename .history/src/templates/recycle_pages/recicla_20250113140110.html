@@ -35,7 +35,7 @@
             <h2>Departamentos</h2>
 
             <select title="deparments" class="deparments">
-                <option selected hidden>Seleccionar</option>
+                <option selected hidden>Seleccionar Ubicacion</option>
                 {% for deparment in deparments %}
                 {% with deparment=deparment %}
                 <option value="{{ deparment.name }}">{{ deparment.name }}</option>

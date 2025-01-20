@@ -102,14 +102,9 @@ materials=[
                 "name":"Lampara"
             },
             {
-                "image_link":"https://i.postimg.cc/h489y35x/C-canasta.webp",
+                "image_link":"",
                 "video_link":"https://www.youtube.com/watch?v=1KCrBnpWIgY",
                 "name":"Canasta"
-            },
-            {
-                "image_link":"https://i.postimg.cc/Dz2ZzBgV/C-repisa.webp",
-                "video_link":"https://www.youtube.com/watch?v=cUdfkxYk0b4",
-                "name":"Repisa"
             }
         ]
     },
@@ -141,76 +136,6 @@ materials=[
                 "image_link":"https://i.postimg.cc/RCj7CHc6/Pt-ajedrez.webp",
                 "video_link":"https://youtu.be/9Ro1YlbHwBk?si=b1-jvFAsMLf7Fj-H",
                 "name":"Ajedrez"
-            },
-            {
-                "image_link":"https://i.postimg.cc/0NFH5HYZ/Pt-comederoave.webp",
-                "video_link":"https://www.youtube.com/watch?v=SLtGqLQfEgc",
-                "name":"Comedero para aves"
-            },
-            {
-                "image_link":"https://i.postimg.cc/1XHkzr5t/Pt-riego.webp",
-                "video_link":"https://www.youtube.com/watch?v=eFMO1ewKQFk",
-                "name":"Sistema de Riego por goteo en plantas"
-            },
-            {
-                "image_link":"https://i.postimg.cc/d09tzXzk/Pt-lamparamoser.webp",
-                "video_link":"https://www.youtube.com/watch?v=czpCV54ZD0g&t=1s",
-                "name":"Lampara de Moser"
-            },
-            {
-                "image_link":"https://i.postimg.cc/SQVX3XWQ/Pt-huertovertical.webp",
-                "video_link":"https://www.youtube.com/watch?v=IEX7D8wxkm4",
-                "name":"Huerto Vertical"
-            },
-            {
-                "image_link":"https://i.postimg.cc/kMptZC4N/Pt-mariposa.webp",
-                "video_link":"https://www.youtube.com/watch?v=i69p9NhhE8Y",
-                "name":"Mariposa"
-            },
-            {
-                "image_link":"https://i.postimg.cc/VNmSMLGw/Pt-bolsa.webp",
-                "video_link":"https://www.youtube.com/watch?v=Sgc5FcI-xSQ",
-                "name":"Bolsa"
-            },
-            {
-                "image_link":"https://i.postimg.cc/nhvjCQ1T/Pt-canasta.webp",
-                "video_link":"https://www.youtube.com/watch?v=S_GNXIKahhE",
-                "name":"Canasta"
-            },
-            {
-                "image_link":"https://i.postimg.cc/tCnVGcZK/Pt-linternafarol.webp",
-                "video_link":"https://www.youtube.com/watch?v=aE3wygs1jxk",
-                "name":"Linterna de Farol"
-            },
-            {
-                "image_link":"https://i.postimg.cc/W4N3zYzb/Pt-arbol.webp",
-                "video_link":"https://www.youtube.com/shorts/vSohJC-KliU",
-                "name":"Arbol de Estrellas"
-            },
-            {
-                "image_link":"https://i.postimg.cc/gJBrfyYc/Pt-cajitadulces.webp",
-                "video_link":"https://www.youtube.com/watch?v=sXNJ4rGaqE8",
-                "name":"Caja de dulces"
-            },
-            {
-                "image_link":"https://i.postimg.cc/sxkx2VQt/Pt-osito.webp",
-                "video_link":"https://www.youtube.com/watch?v=KAtNwLpEaj4",
-                "name":"Osito"
-            },
-            {
-                "image_link":"https://i.postimg.cc/RZzq5Zzt/Pt-florvaso.webp",
-                "video_link":"https://www.youtube.com/watch?v=cT-qprDb7BM",
-                "name":"Ramo de Flores"
-            },
-            {
-                "image_link":"https://i.postimg.cc/8Pvs0rxD/Pt-farol.webp",
-                "video_link":"https://www.youtube.com/watch?v=tCky7vv2W-A",
-                "name":"Farol Chino"
-            },
-            {
-                "image_link":"https://i.postimg.cc/BvmvK5P5/Pt-florero.webp",
-                "video_link":"https://www.youtube.com/watch?v=wd1SOToNj50",
-                "name":"Florero"
             }
         ]
     },
@@ -249,32 +174,6 @@ materials=[
                 "name":"Papeleta/Tronador"
             }
         ]
-    },
-    {
-        "name":"Vidrio",
-        "button_color":"btn_4",
-        "crafts":[
-            {
-                "image_link":"https://i.postimg.cc/nrcJ4rgy/V-botella.webp",
-                "video_link":"https://www.youtube.com/shorts/uqXhSdAee1A",
-                "name":"Botella decorativa"
-            },
-            {
-                "image_link":"https://i.postimg.cc/SNR4jXW8/V-florero.webp",
-                "video_link":"https://www.youtube.com/watch?v=FlHPIma2zv0",
-                "name":"Florero"
-            },
-            {
-                "image_link":"https://i.postimg.cc/kG1df9dB/V-lampara.webp",
-                "video_link":"https://www.youtube.com/watch?v=tgO_TrUTOzA",
-                "name":"Lampara"
-            },
-            {
-                "image_link":"https://i.postimg.cc/Pf2htb8T/V-casa.webp",
-                "video_link":"https://www.youtube.com/watch?v=osXz0tuILwQ",
-                "name":"Casa"
-            }
-        ]
     }
 ]
 
@@ -300,92 +199,9 @@ deparments=[
             "address":"Cra. 65G #23-31, Guayabal",
             "city":"Medellin",
             "info":"Desconocido"
-        },
-        {
-            "name":"RECIMED - ECA Jesús Nazareno",
-            "address":"Calle 58 #51D – 26, Centro de Acopio Municipal",
-            "city":"Medellin",
-            "info":"(604)6041023"
-        },
-        {
-            "name":"Intermediaria De Reciclaje Chatarreria",
-            "address":"Cl. 30A # 57 - 12,Belen",
-            "city":"Medellin",
-            "info":"3176574878 - intermediaria@hotmail.com "
-        },
-        {
-            "name":"Reciclaje 'El Primo'",
-            "address":"Cra. 63D #43-67, Laureles - Estadio",
-            "city":"Medellin",
-            "info":"(604)3018207"
-        },
-        {
-            "name":"Asociación de recicladores de Antioquia - ARRECICLAR",
-            "address":"Cl. 26 44-27, El Poblado",
-            "city":"Medellin",
-            "info":"(604)2321644"
-        },
-        {
-            "name":"Recicladora Cardona García",
-            "address":"Cra. 50c 67-51, Aranjuez",
-            "city":"Medellin",
-            "info":"3172786577"
-        },
-        {
-            "name":"Corporación Aburrá Limpio",
-            "address":"Cra. 52 120 A - 117, La Frontera",
-            "city":"Medellin",
-            "info":"(604)4489656 - corporacionaburralimpio.com.co"
-        },
-        {
-            "name":"Ecorecyclar",
-            "address":"Cl. 80 # 51 - 15, Aranjuez",
-            "city":"Medellin",
-            "info":"3175831195 - ecorecyclar.org"
-        },
-        {
-            "name":"Chatarreria Copacabana",
-            "address":"Cra. 48 #52-29",
-            "city":"Copacabana",
-            "info":"3117706136"
-        },
-        {
-            "name":"Cootrama",
-            "address":"Cl. 73A #45a-61, La Esmeralda",
-            "city":"Itagui",
-            "info":"(604)4485145 - cootrama.com"
-        },
-        {
-            "name":"Excedentes Metálicos Reciclaje y Chatarrería",
-            "address":"Cl. 37b #42-344, Germania",
-            "city":"Itagui",
-            "info":"3103948366"
-        },
-        {
-            "name":"Ciclo Total ESP",
-            "address":"Cra. 30a # 20 - 80, Marinilla",
-            "city":"Medellin",
-            "info":"(604)3223462 - ciclototal.co"
-        },
-        {
-            "name":"COPROFERCOL S.A.S",
-            "address":"Barrio La Planta, Cl. 128 Sur #57-09",
-            "city":"Caldas",
-            "info":"(604)4875101 - coprofercol.com"
         }
         ]
 
-    },
-    {
-        "name":"Arauca",
-        "dir":[
-        {
-            "name":"Recuperadora brisas del Arauca SAS",
-            "address":"Cl. 1 #8 - 81, Arauquita",
-            "city":"Arauca",
-            "info":"3103535449 - recubrisas.com"
-        }
-        ]
     },
     {
         "name":"Atlantico",
@@ -395,92 +211,9 @@ deparments=[
             "address":"Cra. 2 #30-21 Local 1",
             "city":"Barranquilla",
             "info":"3215076349"
-        },
-        {
-            "name":"Recicladora Simón Bolívar",
-            "address":"Esquina 37B Circunvalar",
-            "city":"Barranquilla",
-            "info":"6053267593"
-        },
-        {
-            "name":"Reciclajes de la costa",
-            "address":"Cra. 15 Sur #80 -266, Metropolitana",
-            "city":"Barranquilla",
-            "info":"3013983836"
-        },
-        {
-            "name":"Recuperadora ENVASES Y METALES Valencia",
-            "address":"Cl. 30 #32-87, Sur Oriente",
-            "city":"Barranquilla",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Asociación de recicladores universal ASOUNIVERSAL E.S.P.",
-            "address":"Carrera 8 ° 6-89",
-            "city":"Barranquilla",
-            "info":"3003936365 - asouniversal.com.co"
-        },
-        {
-            "name":"ASOAPRORESIDUOS SEDE 2",
-            "address":"Cl. 38 #27-64, Sur Oriente",
-            "city":"Barranquilla",
-            "info":"3017008691 - asoaproresiduos.com"
         }
         ]
 
-    },
-    {
-        "name":"Bolivar",
-        "dir":[
-        {
-            "name":"Corporación El Gestor Ambiental",
-            "address":"Dg. 28, San Pedro Mártir",
-            "city":"Cartagena de Indias",
-            "info":"3023691605"
-        },
-        {
-            "name":"CORECICLAREC",
-            "address":"Henequen, San Pedro Mártir",
-            "city":"Cartagena de Indias",
-            "info":"3105132825"
-        },
-        {
-            "name":"ASORELIT",
-            "address":"Dg. 28, Sucre",
-            "city":"Cartagena de Indias",
-            "info":"3217998656 - asorelit.com.co"
-        },
-        {
-            "name":"DEPOSITO DE RECICLAJES LA VICTORIA",
-            "address":"Cl. 30f #54, Escallón Vill",
-            "city":"Cartagena de Indias",
-            "info":"Desconocido"
-        },
-        {
-            "name":"RECICLAJES NAYIBIS",
-            "address":"Olaya Herrera #33-63 a 33-1, Alcibia",
-            "city":"Cartagena de Indias",
-            "info":"Desconocido"
-        },
-        {
-            "name":"RECYCK",
-            "address":"Olaya Herrera calle 31d",
-            "city":"Cartagena",
-            "info":"3162466262"
-        },
-        {
-            "name":"COVEXIN S.A.S",
-            "address":"Tv 45A, El Refugio",
-            "city":"Cartagena",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Reciclajes Sf",
-            "address":"55a126 Cl. 31d",
-            "city":"Cartagena",
-            "info":"Desconocido"
-        }
-        ]
     },
     {
         "name":"Boyacá",
@@ -508,66 +241,9 @@ deparments=[
             "address":"carrera 11#3-64",
             "city":"Tunja",
             "info":"3214006716"
-        },
-        {
-            "name":"RECIPLANET",
-            "address":"Cl. 12 #20 37",
-            "city":"Sogamoso",
-            "info":"3209180292 - reciplanetesp.com"
-        },
-        {
-            "name":"Reciclatorres",
-            "address":"Cra. 5 #7 195",
-            "city":"Tunja",
-            "info":"3115032952 - reciclatorres.com"
         }
         ]
 
-    },
-    {
-        "name":"Caldas",
-        "dir":[
-        {
-            "name":"Reciclar S. A.",
-            "address":"Cl. 22 #1452",
-            "city":"Manizales",
-            "info":"Desconocido"
-        },
-        {
-            "name":"Ecoloma",
-            "address":"Cl. 49 # 8 - 16",
-            "city":"Manizales",
-            "info":"3135816340"
-        }
-        ]
-    },
-    {
-        "name":"Caqueta",
-        "dir":[
-        {
-            "name":"Proambiental",
-            "address":"a 4-81,, Cl. 14 #4-1",
-            "city":"Florencia",
-            "info":"Desconocido"
-        },
-        {
-            "name":"ASREPRO",
-            "address":"Cra. 7 #12-17",
-            "city":"Florencia",
-            "info":"3184168504"
-        }
-        ]
-    },
-    {
-        "name":"Casanare",
-        "dir":[
-        {
-            "name":"Recicladora Mundo Limpio Sas",
-            "address":"Cl. 9",
-            "city":"Aguazul",
-            "info":"3125442953 - 3208180248"
-        }
-        ]
     },
     {
         "name":"Cauca",
@@ -656,12 +332,6 @@ deparments=[
             "address":"Av. Boyacá #80-94",
             "city":"Bogotá",
             "info":"fundacionpuntosverdes.com/puntos-de-recoleccion/"
-        },
-        {
-            "name":"Centro de acopio las dos l.l",
-            "address":"Cl. 24 #27A- 71, Los Mártires",
-            "city":"Bogotá",
-            "info":"3133418306"
         }
         ]
     },
@@ -702,6 +372,24 @@ deparments=[
             "address":"calle 2, Vía Alterna al Puerto #12 42",
             "city":"Santa Marta",
             "info":"3187647212"
+        },
+        {
+            "name":"RECYCK",
+            "address":"Olaya Herrera calle 31d",
+            "city":"Cartagena",
+            "info":"3162466262"
+        },
+        {
+            "name":"COVEXIN S.A.S",
+            "address":"Tv 45A, El Refugio",
+            "city":"Cartagena",
+            "info":"Desconocido"
+        },
+        {
+            "name":"Reciclajes Sf",
+            "address":"55a126 Cl. 31d",
+            "city":"Cartagena",
+            "info":"Desconocido"
         }
         ]
 
@@ -756,12 +444,6 @@ deparments=[
             "address":"Calle 1 #1-95 Chimita",
             "city":"Giron",
             "info":"coresanunion.com"
-        },
-        {
-            "name":"ABC Recuperar",
-            "address":"Cra. 10 #27-18, Comuna 4 Occidental",
-            "city":"Bucaramanga",
-            "info":"3174300755"
         }
         ]
     },

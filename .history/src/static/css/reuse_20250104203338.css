@@ -38,7 +38,6 @@ body {
 
 .main-div span {
   font-size: large;
-  font-weight: bold;
 }
 
 .main-div section {
@@ -82,10 +81,6 @@ body {
 
 .main-div article div.btn_3 {
   background-color: #fffc4a;
-}
-
-.main-div article div.btn_4 {
-  background-color: #4aff77;
 }
 
 .main-div article .toggle-button label {
