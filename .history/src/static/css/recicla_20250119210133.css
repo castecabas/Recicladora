@@ -149,6 +149,10 @@ body {
   border-radius: 10px 2px 2px 10px;
   
 }
+.main-div select.deparments option{
+  max-height: 100px;
+  overflow-y: scroll;
+}
 
 .main-div select.deparments:hover{
   cursor: pointer;

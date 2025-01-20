@@ -692,29 +692,6 @@ deparments=[
             "address":"Cl. 24 #27A- 71, Los Mártires",
             "city":"Bogotá",
             "info":"3133418306"
-        },
-        {
-            "name":"Reciclaje San Antonio A.R.",
-            "address":"esquina barrio San Antonio, Cl. 21b #5-15",
-            "city":"Girardot",
-            "info":"3118362400"
-        }
-        ]
-    },
-    {
-        "name":"Guaviare",
-        "dir":[
-            {
-            "name":"Reciclaje de oriente",
-            "address":"20 de Julio, Cl. 7 #24 245",
-            "city":"San José Del Guaviare",
-            "info":"3123125721"
-        },
-        {
-            "name":"RECICLADORA Y CHATARRERIA ASOGUAVIARE",
-            "address":"Brr porvenir, Cl. 9 #17 - 41",
-            "city":"San José Del Guaviare",
-            "info":"3203546320 - facebook.com/asoguaviare.asoguaviare.3"
         }
         ]
     },
@@ -738,17 +715,6 @@ deparments=[
             "address":"Palermo",
             "city":"Neiva",
             "info":"Desconocido"
-        }
-        ]
-    },
-    {
-        "name":"La-Guajira",
-        "dir":[
-            {
-            "name":"ASOCIACION DE RECICLADORES UNIDOS DE RIOHACHA PARA LA GUAJIRA",
-            "address":"Kra 7c Nro 38-41",
-            "city":"Riohacha",
-            "info":"3016465170 - recicladoresunidosdelaguajira.org"
         }
         ]
     },
@@ -846,5 +812,5 @@ deparments=[
         }
         ]
 
-    }
+    },
 ]

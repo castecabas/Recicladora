@@ -702,23 +702,6 @@ deparments=[
         ]
     },
     {
-        "name":"Guaviare",
-        "dir":[
-            {
-            "name":"Reciclaje de oriente",
-            "address":"20 de Julio, Cl. 7 #24 245",
-            "city":"San José Del Guaviare",
-            "info":"3123125721"
-        },
-        {
-            "name":"RECICLADORA Y CHATARRERIA ASOGUAVIARE",
-            "address":"Brr porvenir, Cl. 9 #17 - 41",
-            "city":"San José Del Guaviare",
-            "info":"3203546320 - facebook.com/asoguaviare.asoguaviare.3"
-        }
-        ]
-    },
-    {
         "name":"Huila",
         "dir":[
         {
@@ -738,17 +721,6 @@ deparments=[
             "address":"Palermo",
             "city":"Neiva",
             "info":"Desconocido"
-        }
-        ]
-    },
-    {
-        "name":"La-Guajira",
-        "dir":[
-            {
-            "name":"ASOCIACION DE RECICLADORES UNIDOS DE RIOHACHA PARA LA GUAJIRA",
-            "address":"Kra 7c Nro 38-41",
-            "city":"Riohacha",
-            "info":"3016465170 - recicladoresunidosdelaguajira.org"
         }
         ]
     },
@@ -846,5 +818,5 @@ deparments=[
         }
         ]
 
-    }
+    },
 ]

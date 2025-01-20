@@ -742,17 +742,6 @@ deparments=[
         ]
     },
     {
-        "name":"La-Guajira",
-        "dir":[
-            {
-            "name":"ASOCIACION DE RECICLADORES UNIDOS DE RIOHACHA PARA LA GUAJIRA",
-            "address":"Kra 7c Nro 38-41",
-            "city":"Riohacha",
-            "info":"3016465170 - recicladoresunidosdelaguajira.org"
-        }
-        ]
-    },
-    {
         "name":"Magdalena",
         "dir":[
         {
