@@ -918,16 +918,6 @@ deparments=[
             "info":"3157726976"
         }
         ]
-    },
-    {
-        "name":"Vaupes",
-        "dir":[
-        {
-            "name":"RECICLAR VAUPÉS SAS",
-            "address":"Cl. 11 #13-44",
-            "city":"Mitú",
-            "info":"3125629252"
-        }
-        ]
+
     }
 ]

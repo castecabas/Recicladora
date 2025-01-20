@@ -811,23 +811,6 @@ deparments=[
         ]
     },
     {
-        "name":"Quindío",
-        "dir":[
-        {
-            "name":"RECIICLAR SAS ESP",
-            "address":"Cl. 17 #20-49",
-            "city":"Armenia",
-            "info":"3205095283 - reciiclaresp.org"
-        },
-        {
-            "name":"Centro de Reciclaje Recycle SAS",
-            "address":"Cl. 38 #1923",
-            "city":"Armenia",
-            "info":"3154739762"
-        }
-        ]
-    },
-    {
         "name":"Santander",
         "dir":[
         {
@@ -875,34 +858,6 @@ deparments=[
         ]
     },
     {
-        "name":"Sucre",
-        "dir":[
-        {
-            "name":"Coonservamos (tercera sede)",
-            "address":"Cl. 38 #19-325 a 19-7",
-            "city":"Sincelejo",
-            "info":"Desconocido"
-        },
-        {
-            "name":"CORECINORTE",
-            "address":"Miraflores, Cl. 38 #8a-124, Sincelejo, Sucre",
-            "city":"Sincelejo",
-            "info":"3012806610"
-        }
-        ]
-    },
-    {
-        "name":"Tolima",
-        "dir":[
-        {
-            "name":"Asociación de recicladores ASOREANC",
-            "address":"Cra. 5 #79b23",
-            "city":"Ibagué",
-            "info":"3142404418"
-        }
-        ]
-    },
-    {
         "name":"Valle-del-Cauca",
         "dir":[
         {
@@ -918,16 +873,6 @@ deparments=[
             "info":"3157726976"
         }
         ]
-    },
-    {
-        "name":"Vaupes",
-        "dir":[
-        {
-            "name":"RECICLAR VAUPÉS SAS",
-            "address":"Cl. 11 #13-44",
-            "city":"Mitú",
-            "info":"3125629252"
-        }
-        ]
+
     }
 ]
