@@ -49,7 +49,7 @@ body {
 .main-div .bins .title {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-weight: bold;
   font-size: 3vh;
   text-shadow: -1px -1px 0 var(--negro-950), -1px 1px 0 var(--negro-950), 1px -1px 0 var(--negro-950),

@@ -49,7 +49,7 @@ body {
 .main-div div img {
   aspect-ratio: 1/1;
   max-height: 400px;
-  min-height: 380px;
+  min-width: 380px;
   padding: 40px;
   border-radius: 25%;
 }

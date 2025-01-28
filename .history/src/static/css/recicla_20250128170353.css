@@ -49,7 +49,7 @@ body {
 .main-div .bins .title {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-weight: bold;
   font-size: 3vh;
   text-shadow: -1px -1px 0 var(--negro-950), -1px 1px 0 var(--negro-950), 1px -1px 0 var(--negro-950),
@@ -81,10 +81,10 @@ body {
 
 .main-div .bins .image {
   aspect-ratio: 21/9;
-  width: 80vw;
-  max-height: 400px;
+  max-height: 480px;
+  max-width: 80vw;
   border-radius: 20px;
-  object-fit:contain;
+  min-height: 110px;
 }
 
 .main-div .bins .descripcion {
