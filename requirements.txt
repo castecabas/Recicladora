@@ -1,8 +1,10 @@
 Flask==3.1.0
 flask_mail==0.10.0
-numpy==2.2.1
-opencv_python==4.10.0.84
+numpy==1.26.4
+opencv_python==4.9.0.80
 Pillow==11.1.0
-torch==2.5.1+cpu
-torchvision==0.20.1
+torch==2.6.0
+torchvision==0.21.0
 ultralytics==8.3.51
+Flask-Caching==2.3.0
+Flask-Compress==1.17
