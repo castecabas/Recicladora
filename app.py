@@ -11,7 +11,8 @@ import os
 import re
 from src.data import areas,notices,deparments,materials
 
-app = Flask(__name__, template_folder='templates')
+template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'templates')
+app = Flask(__name__, template_folder=template_dir)
 Compress(app)
 
 cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
@@ -177,4 +178,4 @@ def detect():
 # EJECUCION
 if __name__ == '__main__':
     
-    app.run(port=5000)
+    app.run(port=5000,debug=True)
