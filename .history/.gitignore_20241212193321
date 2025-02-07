@@ -1,4 +1,0 @@
-venv/
-Dataset/
-Scripts/trainer/runs
-Scripts/trainer/yolo11n.pt
