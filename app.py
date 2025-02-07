@@ -2,14 +2,14 @@ from flask import Flask, render_template, Response,redirect, request, jsonify ,f
 from flask_mail import Mail,Message
 from flask_caching import Cache
 from flask_compress import Compress
-from yolo_model import YOLOModel
-from camera import Camera
+from src.yolo_model import YOLOModel
+from src.camera import Camera
 import cv2
 import numpy as np
 import base64
 import os
 import re
-from data import areas,notices,deparments,materials
+from src.data import areas,notices,deparments,materials
 
 app = Flask(__name__)
 Compress(app)
@@ -176,4 +176,5 @@ def detect():
     
 # EJECUCION
 if __name__ == '__main__':
+    
     app.run(debug=True)
