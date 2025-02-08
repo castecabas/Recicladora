@@ -9,14 +9,8 @@ const clsname = [
     "Periodico o Revista", "Forma de Papel", "Papel de Higiene", "Bolsa de Plastico", 
     "Botella de Plastico", "Contenedor de Plastico", "Envase de Plastico", 
     "Vajilla de Plastico", "Tapa de Plastico", "Utensilio de Plastico"
-  ];
+];
 let confidenceThreshold = 0.5;
-
-const parrafo = document.getElementById("confidenceValue");
-
-const valorDecimal = parseFloat(parrafo.textContent);
-const valorPorcentaje = valorDecimal * 100;
-parrafo.textContent = valorPorcentaje + "%";
 
 document.addEventListener('DOMContentLoaded', function () {
     fetchCameras();
@@ -30,10 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     confidenceSlider.addEventListener('input', function () {
         confidenceThreshold = parseFloat(this.value);
-        confidenceValue.textContent = confidenceThreshold.toFixed(2);
-        const valorDecimal = parseFloat(parrafo.textContent);
-        const valorPorcentaje = valorDecimal * 100;
-        parrafo.textContent = valorPorcentaje.toFixed(0) + "%";
+        confidenceValue.textContent = (confidenceThreshold * 100).toFixed(0) + "%";
     });
 });
 
@@ -41,29 +32,30 @@ function fetchCameras() {
     navigator.mediaDevices.enumerateDevices()
         .then(devices => {
             cameras = devices.filter(device => device.kind === 'videoinput');
+            currentCameraIndex = cameras.length > 0 ? 0 : -1;
             updateCurrentCamera();
         })
-        .catch(error => {
-            console.error('Error enumerating devices:', error);
-        });
+        .catch(error => console.error('Error enumerando dispositivos:', error));
 }
 
 async function switchCamera() {
+    if (cameras.length === 0) return;
+    
     currentCameraIndex = (currentCameraIndex + 1) % cameras.length;
     updateCurrentCamera();
 
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
-            video: { deviceId: { ideal: cameras[currentCameraIndex].deviceId } }
+            video: { deviceId: { exact: cameras[currentCameraIndex].deviceId } }
         });
         document.getElementById('video').srcObject = stream;
     } catch (error) {
-        console.error('Error switching camera:', error);
+        console.error('Error al cambiar de cámara:', error);
     }
 }
 
 function updateCurrentCamera() {
-    const cameraInfo = cameras[currentCameraIndex] ? cameras[currentCameraIndex].label : 'Unknown';
+    const cameraInfo = cameras[currentCameraIndex] ? cameras[currentCameraIndex].label : 'No disponible';
     document.getElementById('currentCamera').textContent = cameraInfo;
 }
 
@@ -94,14 +86,12 @@ function detectObjects(formData) {
         method: 'POST',
         body: formData
     })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('resultImage').src = data.image;
-            updateDetectionsList(data.detections);
-        })
-        .catch(error => {
-            console.error('Error detecting objects:', error);
-        });
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('resultImage').src = data.image;
+        updateDetectionsList(data.detections);
+    })
+    .catch(error => console.error('Error detectando objetos:', error));
 }
 
 function updateDetectionsList(detections) {
@@ -110,17 +100,19 @@ function updateDetectionsList(detections) {
     detections.forEach(detection => {
         const [x1, y1, x2, y2, conf, cls] = detection;
         const li = document.createElement('li');
-        li.textContent = `Clase: ${clsname[cls] || 'Desconocido'}, Confianza: ${conf.toFixed(2) * 100} %`;
+        li.textContent = `Clase: ${clsname[cls] || 'Desconocido'}, Confianza: ${(conf * 100).toFixed(0)} %`;
         list.appendChild(li);
     });
 }
 
 async function initializeCamera() {
     try {
+        if (document.getElementById('video').srcObject) return; // Evita reiniciar el stream si ya está en uso
+
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
         document.getElementById('video').srcObject = stream;
     } catch (error) {
-        console.error('Error accessing camera:', error);
+        console.error('Error accediendo a la cámara:', error);
     }
 }
 
