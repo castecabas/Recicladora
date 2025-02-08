@@ -12,7 +12,8 @@ import re
 from src.data import areas,notices,deparments,materials
 
 template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'templates')
-app = Flask(__name__, template_folder=template_dir)
+static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'static')
+app = Flask(__name__, template_folder=template_dir,static_folder=static_dir)
 Compress(app)
 
 cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
