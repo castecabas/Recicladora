@@ -19,14 +19,14 @@ if __name__ == '__main__':
     os.makedirs(logdir, exist_ok=True)
 
     # Entrenar con dicho modelo ("Ruta o modelo vacio")
-    model = YOLO("C:/Users/castecabas/Desktop/PROYECTOS/Recicladora/Scripts/trainer/runs/detect/train2/weights/last.pt")
+    model = YOLO("C:/Users/castecabas/Desktop/PROYECTOS/Recicladora/Scripts/trainer/runs/detect/train3/weights/last.pt")
 
     model.train(
         data="C:/Users/castecabas/Desktop/PROYECTOS/Recicladora/Dataset/dataset.yaml", #colocar su Data.yaml
         batch=6,
         imgsz=640,
         workers=6,
-        epochs=200,
+        epochs=80,
         patience=30,
         optimizer="AdamW",
         augment=True,

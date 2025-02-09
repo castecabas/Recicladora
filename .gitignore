@@ -1,7 +1,10 @@
 venv/
 myenv/
 .history/
+src/__pycache__
 Dataset/
 Scripts/trainer/runs/detect/train
 Scripts/trainer/runs/detect/train2/weights
+Scripts/trainer/runs/detect/train3/weights
 Scripts/trainer/yolo11n.pt
+Scripts/trainer/yolov8n.pt
