@@ -75,11 +75,38 @@ function captureAndDetect() {
 
 function handleFileSelect(event) {
     const file = event.target.files[0];
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('confidence', confidenceThreshold);
-    detectObjects(formData);
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        // e.target.result contiene la imagen en formato Data URL (por ejemplo: "data:image/jpeg;base64,/9j/...")
+        const base64Image = e.target.result;
+
+        // Ahora enviamos la imagen y la confianza en formato JSON
+        sendDetectionRequestJSON(base64Image, confidenceThreshold);
+    };
+    reader.readAsDataURL(file);
 }
+
+function sendDetectionRequestJSON(base64Image, confidence) {
+    fetch('/detect', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            image: base64Image,  // Enviamos la imagen codificada en Base64
+            confidence: confidence  // Enviamos el valor de confianza
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('resultImage').src = data.image;
+        updateDetectionsList(data.detections);
+    })
+    .catch(error => console.error('Error detectando objetos:', error));
+}
+
 
 function detectObjects(formData) {
     fetch('/detect', {

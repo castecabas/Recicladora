@@ -146,26 +146,44 @@ def switch_camera(camera_id):
 @app.route('/detect', methods=['POST'])
 def detect():
     try:
-        if 'file' not in request.files:
-            print("❌ No se recibió el archivo")
-            return jsonify({'error': 'No file part'}), 400
+        # Si la solicitud es JSON, se procesa de esta forma
+        if request.is_json:
+            data = request.get_json()
+            if 'image' not in data:
+                print("❌ No se recibió la clave 'image' en el JSON")
+                return jsonify({'error': 'No image provided in JSON'}), 400
 
-        file = request.files['file']
-        print(f"✅ Archivo recibido: {file.filename}")
+            image_data = data['image']
+            # Si la cadena incluye el prefijo "data:image/...", lo removemos (opcional)
+            if image_data.startswith("data:image"):
+                image_data = image_data.split(",")[1]
 
-        # Obtener el valor de la confianza (con un default en caso de que no se envíe)
-        confidence = float(request.form.get('confidence', 0.25))
-        print(f"🔍 Confidence: {confidence}")
+            # Decodificar la imagen desde base64
+            image_bytes = base64.b64decode(image_data)
+            npimg = np.frombuffer(image_bytes, np.uint8)
+            img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 
-        # Leer la imagen correctamente
-        file_bytes = file.read()
-        npimg = np.frombuffer(file_bytes, np.uint8)
-        img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+            # Obtener el valor de confianza, con default 0.25 si no se proporciona
+            confidence = float(data.get('confidence', 0.25))
+        else:
+            # Si no es JSON, se puede mantener la lógica para form-data
+            if 'file' not in request.files:
+                print("❌ No se recibió archivo en form-data")
+                return jsonify({'error': 'No file part'}), 400
+
+            file = request.files['file']
+            file_bytes = file.read()
+            npimg = np.frombuffer(file_bytes, np.uint8)
+            img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+            confidence = float(request.form.get('confidence', 0.25))
+
         if img is None:
             print("❌ Error decodificando la imagen")
             return jsonify({'error': 'Invalid image'}), 400
 
-        # Detectar objetos con el modelo YOLO
+        print(f"✅ Imagen recibida, Confidence: {confidence}")
+
+        # Procesar la detección con YOLO
         results = yolo_model.detect(img, conf_threshold=confidence)
         print(f"🔎 Detecciones: {results}")
 
@@ -187,6 +205,7 @@ def detect():
     except Exception as e:
         print(f"❌ Error during detection: {e}")
         return jsonify({'error': f'Error during detection: {e}'}), 500
+
 
 
 
