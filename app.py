@@ -147,7 +147,7 @@ def switch_camera(camera_id):
 def detect():
     try:
         if 'file' not in request.files:
-            print("❌ No file received")  
+            print("❌ No file received")
             return jsonify({'error': 'No file part'}), 400
 
         file = request.files['file']
@@ -156,13 +156,14 @@ def detect():
         confidence = float(request.form.get('confidence', 0.25))
         print(f"🔍 Confidence: {confidence}")
 
-        # Lee la imagen del archivo
-        npimg = np.fromfile(file, np.uint8)
+        # Lee la imagen del archivo de forma correcta
+        file_bytes = file.read()  # Lee el contenido del stream
+        npimg = np.frombuffer(file_bytes, np.uint8)
         img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
         if img is None:
             print("❌ Error decodificando la imagen")
             return jsonify({'error': 'Invalid image'}), 400
-        
+
         # Detecta objetos usando el modelo YOLO
         results = yolo_model.detect(img, conf_threshold=confidence)
         print(f"🔎 Detecciones: {results}")
@@ -184,7 +185,8 @@ def detect():
         })
     except Exception as e:
         print(f"❌ Error during detection: {e}")
-        return jsonify({'error': str(e)}), 500
+        return jsonify({'error': f'An error occurred during object detection: {e}'}), 500
+
 
     
 # EJECUCION
