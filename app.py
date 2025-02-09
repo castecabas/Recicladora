@@ -147,35 +147,36 @@ def switch_camera(camera_id):
 def detect():
     try:
         if 'file' not in request.files:
-            print("❌ No file received")
+            print("❌ No se recibió el archivo")
             return jsonify({'error': 'No file part'}), 400
 
         file = request.files['file']
-        print(f"✅ Recibido archivo: {file.filename}")
+        print(f"✅ Archivo recibido: {file.filename}")
 
+        # Obtener el valor de la confianza (con un default en caso de que no se envíe)
         confidence = float(request.form.get('confidence', 0.25))
         print(f"🔍 Confidence: {confidence}")
 
-        # Lee la imagen del archivo de forma correcta
-        file_bytes = file.read()  # Lee el contenido del stream
+        # Leer la imagen correctamente
+        file_bytes = file.read()
         npimg = np.frombuffer(file_bytes, np.uint8)
         img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
         if img is None:
             print("❌ Error decodificando la imagen")
             return jsonify({'error': 'Invalid image'}), 400
 
-        # Detecta objetos usando el modelo YOLO
+        # Detectar objetos con el modelo YOLO
         results = yolo_model.detect(img, conf_threshold=confidence)
         print(f"🔎 Detecciones: {results}")
 
         if results is None:
-            print("❌ No detections found")
+            print("❌ No se obtuvieron detecciones")
             return jsonify({'error': 'No detections returned from model'}), 500
 
-        # Dibuja los cuadros de detección en la imagen
+        # Dibujar los cuadros de detección en la imagen
         processed_img = yolo_model.draw_boxes(img, results)
 
-        # Codifica la imagen procesada en base64 para enviar al cliente
+        # Codificar la imagen procesada en base64
         _, buffer = cv2.imencode('.jpg', processed_img)
         img_base64 = base64.b64encode(buffer).decode('utf-8')
 
@@ -185,7 +186,8 @@ def detect():
         })
     except Exception as e:
         print(f"❌ Error during detection: {e}")
-        return jsonify({'error': f'An error occurred during object detection: {e}'}), 500
+        return jsonify({'error': f'Error during detection: {e}'}), 500
+
 
 
     
