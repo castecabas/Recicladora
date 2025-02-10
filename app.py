@@ -11,6 +11,8 @@ import os
 import re
 from src.data import areas,notices,deparments,materials
 
+DEBUG_MODE = False
+
 template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'templates')
 static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'static')
 app = Flask(__name__, template_folder=template_dir,static_folder=static_dir)
@@ -152,80 +154,69 @@ def switch_camera(camera_id):
 @app.route('/detect', methods=['POST'])
 def detect():
     try:
-        print("==> Recibiendo petición en /detect")
-        print("Content-Type:", request.headers.get("Content-Type"))
+        if DEBUG_MODE: print("==> Recibiendo petición en /detect")
 
-        # Procesa la petición JSON
+        content_type = request.headers.get("Content-Type")
+        if DEBUG_MODE: print("Content-Type:", content_type)
+
+        image_data, confidence = None, 0.25
+
+        # Procesar JSON (imagen en base64)
         if request.is_json:
             data = request.get_json()
-            if 'image' not in data:
-                print("❌ Error: No se encontró la clave 'image' en el JSON")
+            image_data = data.get('image')
+            confidence = float(data.get('confidence', 0.25))
+
+            if not image_data:
                 return jsonify({'error': 'No image provided in JSON'}), 400
 
-            image_data = data['image']
-            print("Imagen recibida (string largo:", len(image_data), ")")
-            
-            # Remover prefijo si existe
+            # Remover prefijo "data:image/..." si existe
             if image_data.startswith("data:image"):
-                image_data = image_data.split(",")[1]
-            
+                image_data = image_data.split(",")[-1]
+
             try:
                 image_bytes = base64.b64decode(image_data)
             except Exception as decode_err:
-                print("❌ Error decodificando base64:", decode_err)
                 return jsonify({'error': 'Base64 decoding error'}), 400
 
-            npimg = np.frombuffer(image_bytes, np.uint8)
-            img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
-            if img is None:
-                print("❌ Error decodificando la imagen con cv2.imdecode")
-                return jsonify({'error': 'Invalid image'}), 400
-
-            confidence = float(data.get('confidence', 0.25))
-            print("Confidence:", confidence)
-
+        # Procesar form-data (archivo de imagen)
         else:
-            # Si no es JSON, se puede manejar la subida de archivos tradicional
-            if 'file' not in request.files:
-                print("❌ Error: No file part en form-data")
-                return jsonify({'error': 'No file part'}), 400
-
-            file = request.files['file']
-            file_bytes = file.read()
-            npimg = np.frombuffer(file_bytes, np.uint8)
-            img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
-            if img is None:
-                print("❌ Error decodificando la imagen en form-data")
-                return jsonify({'error': 'Invalid image'}), 400
-
+            file = request.files.get('file')
+            if not file:
+                return jsonify({'error': 'No file provided'}), 400
+            image_bytes = file.read()
             confidence = float(request.form.get('confidence', 0.25))
-            print("Confidence:", confidence)
 
-        # Llama a la detección del modelo
-        print("Iniciando detección con el modelo...")
+        # Decodificar imagen
+        npimg = np.frombuffer(image_bytes, np.uint8)
+        img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+        if img is None:
+            return jsonify({'error': 'Invalid image'}), 400
+
+        # Reducir tamaño de la imagen para acelerar inferencia
+        img = cv2.resize(img, (320, 320), interpolation=cv2.INTER_AREA)
+
+        if DEBUG_MODE: print(f"Iniciando detección con confianza {confidence}...")
+
+        # Llamada al modelo
         results = yolo_model.detect(img, conf_threshold=confidence)
-        print("Resultados:", results)
         if results is None:
-            print("❌ No se obtuvieron detecciones")
             return jsonify({'error': 'No detections returned from model'}), 500
 
-        # Dibuja las detecciones sobre la imagen
+        # Dibujar detecciones
         processed_img = yolo_model.draw_boxes(img, results)
 
-        # Codifica la imagen procesada en base64
+        # Codificar imagen de salida en base64 (solo si es necesario)
         _, buffer = cv2.imencode('.jpg', processed_img)
         img_base64 = base64.b64encode(buffer).decode('utf-8')
-        print("Envío de respuesta exitoso")
-        
+
         return jsonify({
             'image': f'data:image/jpeg;base64,{img_base64}',
             'detections': results
         })
 
     except Exception as e:
-        print("❌ Error durante la detección:", e)
-        # Es importante retornar un JSON válido incluso en error
-        return jsonify({'error': f'Error during detection: {e}'}), 500
+        return jsonify({'error': f'Error during detection: {str(e)}'}), 500
 
     
 # EJECUCION
