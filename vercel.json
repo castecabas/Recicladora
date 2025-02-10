@@ -18,8 +18,7 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "ignore": ["src/model/","__pycache__/*"]
+  ]
 }
 
 
