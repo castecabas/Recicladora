@@ -35,6 +35,7 @@ camera = Camera()
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
+@cache.cached(timeout=300)
 def index():
     return render_template('index.html')
 
@@ -43,6 +44,7 @@ def about():
     return render_template('about.html')
 
 @app.route('/learn')
+@cache.cached(timeout=300)
 def learn():
     return render_template('learn.html',areas=areas)
 
@@ -75,10 +77,12 @@ def nocivos():
     return render_template('/learn_pages/nocivo.html')
 
 @app.route('/model')
+@cache.cached(timeout=300)
 def model():
     return render_template('model.html')
 
 @app.route('/news')
+@cache.cached(timeout=300)
 def news():
     return render_template('news.html',notices=notices)
 
@@ -87,10 +91,12 @@ def recycle():
     return render_template('recycle.html')
 
 @app.route('/recycle/recicla')
+@cache.cached(timeout=300)
 def recicla():
     return render_template('/recycle_pages/recicla.html',deparments=deparments)
 
 @app.route('/recycle/reuse')
+@cache.cached(timeout=300)
 def reuse():
     return render_template('/recycle_pages/reuse.html',materials=materials)
 

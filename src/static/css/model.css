@@ -75,7 +75,7 @@ main div #video {
 
 main div #resultImage {
     border-radius: 20px;
-    max-width: 640px;
+    max-width: 320px;
     width: 100%;
     max-height: 740px;
     padding: 0;
