@@ -13,6 +13,21 @@ from src.data import areas,notices,deparments,materials
 
 DEBUG_MODE = False
 
+
+# Suponiendo que tu script se ejecuta desde la raíz o se conoce la ruta base:
+# Si este script está en la raíz, puedes definir la ruta base así:
+base_dir = os.path.join("/tmp", "Recicladora")
+
+# Configuración para Matplotlib:
+matplotlib_config_dir = os.path.join(base_dir, "config", "matplotlib")
+os.makedirs(matplotlib_config_dir, exist_ok=True)  # Crea el directorio si no existe
+os.environ["MPLCONFIGDIR"] = matplotlib_config_dir
+
+# Configuración para Ultralytics:
+ultralytics_config_dir = os.path.join(base_dir, "config", "ultralytics")
+os.makedirs(ultralytics_config_dir, exist_ok=True)  # Crea el directorio si no existe
+os.environ["ULTRALYTICS_HOME"] = ultralytics_config_dir
+
 template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'templates')
 static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'static')
 app = Flask(__name__, template_folder=template_dir,static_folder=static_dir)
@@ -194,7 +209,7 @@ def detect():
             return jsonify({'error': 'Invalid image'}), 400
 
         # Reducir tamaño de la imagen para acelerar inferencia
-        img = cv2.resize(img, (320, 320), interpolation=cv2.INTER_AREA)
+        img = cv2.resize(img, (640, 640), interpolation=cv2.INTER_AREA)
 
         if DEBUG_MODE: print(f"Iniciando detección con confianza {confidence}...")
 
