@@ -146,68 +146,80 @@ def switch_camera(camera_id):
 @app.route('/detect', methods=['POST'])
 def detect():
     try:
-        # Si la solicitud es JSON, se procesa de esta forma
+        print("==> Recibiendo petición en /detect")
+        print("Content-Type:", request.headers.get("Content-Type"))
+
+        # Procesa la petición JSON
         if request.is_json:
             data = request.get_json()
             if 'image' not in data:
-                print("❌ No se recibió la clave 'image' en el JSON")
+                print("❌ Error: No se encontró la clave 'image' en el JSON")
                 return jsonify({'error': 'No image provided in JSON'}), 400
 
             image_data = data['image']
-            # Si la cadena incluye el prefijo "data:image/...", lo removemos (opcional)
+            print("Imagen recibida (string largo:", len(image_data), ")")
+            
+            # Remover prefijo si existe
             if image_data.startswith("data:image"):
                 image_data = image_data.split(",")[1]
+            
+            try:
+                image_bytes = base64.b64decode(image_data)
+            except Exception as decode_err:
+                print("❌ Error decodificando base64:", decode_err)
+                return jsonify({'error': 'Base64 decoding error'}), 400
 
-            # Decodificar la imagen desde base64
-            image_bytes = base64.b64decode(image_data)
             npimg = np.frombuffer(image_bytes, np.uint8)
             img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+            if img is None:
+                print("❌ Error decodificando la imagen con cv2.imdecode")
+                return jsonify({'error': 'Invalid image'}), 400
 
-            # Obtener el valor de confianza, con default 0.25 si no se proporciona
             confidence = float(data.get('confidence', 0.25))
+            print("Confidence:", confidence)
+
         else:
-            # Si no es JSON, se puede mantener la lógica para form-data
+            # Si no es JSON, se puede manejar la subida de archivos tradicional
             if 'file' not in request.files:
-                print("❌ No se recibió archivo en form-data")
+                print("❌ Error: No file part en form-data")
                 return jsonify({'error': 'No file part'}), 400
 
             file = request.files['file']
             file_bytes = file.read()
             npimg = np.frombuffer(file_bytes, np.uint8)
             img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+            if img is None:
+                print("❌ Error decodificando la imagen en form-data")
+                return jsonify({'error': 'Invalid image'}), 400
+
             confidence = float(request.form.get('confidence', 0.25))
+            print("Confidence:", confidence)
 
-        if img is None:
-            print("❌ Error decodificando la imagen")
-            return jsonify({'error': 'Invalid image'}), 400
-
-        print(f"✅ Imagen recibida, Confidence: {confidence}")
-
-        # Procesar la detección con YOLO
+        # Llama a la detección del modelo
+        print("Iniciando detección con el modelo...")
         results = yolo_model.detect(img, conf_threshold=confidence)
-        print(f"🔎 Detecciones: {results}")
-
+        print("Resultados:", results)
         if results is None:
             print("❌ No se obtuvieron detecciones")
             return jsonify({'error': 'No detections returned from model'}), 500
 
-        # Dibujar los cuadros de detección en la imagen
+        # Dibuja las detecciones sobre la imagen
         processed_img = yolo_model.draw_boxes(img, results)
 
-        # Codificar la imagen procesada en base64
+        # Codifica la imagen procesada en base64
         _, buffer = cv2.imencode('.jpg', processed_img)
         img_base64 = base64.b64encode(buffer).decode('utf-8')
-
+        print("Envío de respuesta exitoso")
+        
         return jsonify({
             'image': f'data:image/jpeg;base64,{img_base64}',
             'detections': results
         })
+
     except Exception as e:
-        print(f"❌ Error during detection: {e}")
+        print("❌ Error durante la detección:", e)
+        # Es importante retornar un JSON válido incluso en error
         return jsonify({'error': f'Error during detection: {e}'}), 500
-
-
-
 
     
 # EJECUCION
