@@ -9,9 +9,20 @@ import numpy as np
 import base64
 import os
 import re
+import gdown
 from src.data import areas,notices,deparments,materials
 
 DEBUG_MODE = False
+
+# ID del archivo de Google Drive
+FILE_ID = "1OWhwS6v-VyU4lTBF8UgZ81pp7S_rnlKA"
+MODEL_PATH = "best_yolov11.pt"  # Cambia esto según tu modelo
+
+# Verifica si el modelo ya existe, si no, lo descarga
+if not os.path.exists(MODEL_PATH):
+    print("Descargando modelo desde Google Drive...")
+    gdown.download(f"https://drive.google.com/uc?id={FILE_ID}", MODEL_PATH, quiet=False)
+    print("Modelo descargado con éxito.")
 
 
 # Suponiendo que tu script se ejecuta desde la raíz o se conoce la ruta base:
@@ -45,7 +56,7 @@ app.config['MAIL_PASSWORD'] = 'bllqzryutqqmmcdh'
 
 mail = Mail(app)
 
-yolo_model = YOLOModel('src/model/best_yolov8n.pt')
+yolo_model = YOLOModel('best_yolov11.pt')
 camera = Camera()
 
 # RUTAS

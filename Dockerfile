@@ -15,11 +15,11 @@ RUN apt-get update && apt-get install -y \
 
 # Define variables de entorno para Matplotlib y Ultralytics
 ENV MPLCONFIGDIR=/tmp/matplotlib
-ENV YOLO_CONFIG_DIR=/tmp/ultralytics
 ENV ULTRALYTICS_HOME=/tmp/ultralytics
 
-# Crea los directorios de configuración en /tmp
-RUN mkdir -p /tmp/matplotlib /tmp/ultralytics
+# Crea los directorios de configuración en /tmp y ajusta sus permisos para que sean escribibles
+RUN mkdir -p /tmp/matplotlib /tmp/ultralytics && \
+    chmod -R 777 /tmp/matplotlib /tmp/ultralytics
 
 WORKDIR /app
 
@@ -37,5 +37,6 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
 EXPOSE 5000
 
 CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:5000", "app:app"]
+
 
 
