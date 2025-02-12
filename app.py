@@ -13,6 +13,8 @@ import re
 import gdown
 from src.data import areas, notices, deparments, materials
 
+import streamlit as st
+
 DEBUG_MODE = False
 
 # ID del archivo de Google Drive
@@ -47,6 +49,11 @@ yolo_model = YOLOModel('src/model/best_yolov11.pt')
 camera = Camera()
 
 # RUTAS
+
+def main():
+    st.title("Mi Aplicación Streamlit")
+    st.write("¡Hola desde Streamlit!")
+
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
@@ -234,5 +241,5 @@ def detect():
     
 # EJECUCION
 if __name__ == '__main__':
-    
+    main()
     app.run(port=5000,debug=True)
