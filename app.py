@@ -1,5 +1,7 @@
-from flask import Flask, render_template, Response,redirect, request, jsonify ,flash
-from flask_mail import Mail,Message
+import os
+
+from flask import Flask, render_template, Response, redirect, request, jsonify, flash
+from flask_mail import Mail, Message
 from flask_caching import Cache
 from flask_compress import Compress
 from src.yolo_model import YOLOModel
@@ -7,10 +9,9 @@ from src.camera import Camera
 import cv2
 import numpy as np
 import base64
-import os
 import re
 import gdown
-from src.data import areas,notices,deparments,materials
+from src.data import areas, notices, deparments, materials
 
 DEBUG_MODE = False
 
@@ -24,20 +25,6 @@ if not os.path.exists(MODEL_PATH):
     gdown.download(f"https://drive.google.com/uc?id={FILE_ID}", MODEL_PATH, quiet=False)
     print("Modelo descargado con éxito.")
 
-
-# Suponiendo que tu script se ejecuta desde la raíz o se conoce la ruta base:
-# Si este script está en la raíz, puedes definir la ruta base así:
-base_dir = os.path.join("/tmp", "Recicladora")
-
-# Configuración para Matplotlib:
-matplotlib_config_dir = os.path.join(base_dir, "config", "matplotlib")
-os.makedirs(matplotlib_config_dir, exist_ok=True)  # Crea el directorio si no existe
-os.environ["MPLCONFIGDIR"] = matplotlib_config_dir
-
-# Configuración para Ultralytics:
-ultralytics_config_dir = os.path.join(base_dir, "config", "ultralytics")
-os.makedirs(ultralytics_config_dir, exist_ok=True)  # Crea el directorio si no existe
-os.environ["ULTRALYTICS_HOME"] = ultralytics_config_dir
 
 template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'templates')
 static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'static')
@@ -56,7 +43,7 @@ app.config['MAIL_PASSWORD'] = 'bllqzryutqqmmcdh'
 
 mail = Mail(app)
 
-yolo_model = YOLOModel('best_yolov11.pt')
+yolo_model = YOLOModel('src/model/best_yolov11.pt')
 camera = Camera()
 
 # RUTAS
