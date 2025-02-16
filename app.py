@@ -1,5 +1,4 @@
 import os
-
 from flask import Flask, render_template, Response, redirect, request, jsonify, flash
 from flask_mail import Mail, Message
 from flask_caching import Cache
@@ -13,13 +12,9 @@ import re
 import gdown
 from src.data import areas, notices, deparments, materials
 
-import streamlit as st
-
-DEBUG_MODE = False
-
 # ID del archivo de Google Drive
 FILE_ID = "1OWhwS6v-VyU4lTBF8UgZ81pp7S_rnlKA"
-MODEL_PATH = "best_yolov11.pt"  # Cambia esto según tu modelo
+MODEL_PATH = "src/model/best_yolov11.pt"  # Cambia esto según tu modelo
 
 # Verifica si el modelo ya existe, si no, lo descarga
 if not os.path.exists(MODEL_PATH):
@@ -49,11 +44,6 @@ yolo_model = YOLOModel('src/model/best_yolov11.pt')
 camera = Camera()
 
 # RUTAS
-
-def main():
-    st.title("Mi Aplicación Streamlit")
-    st.write("¡Hola desde Streamlit!")
-
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
@@ -174,10 +164,8 @@ def switch_camera(camera_id):
 @app.route('/detect', methods=['POST'])
 def detect():
     try:
-        if DEBUG_MODE: print("==> Recibiendo petición en /detect")
 
         content_type = request.headers.get("Content-Type")
-        if DEBUG_MODE: print("Content-Type:", content_type)
 
         image_data, confidence = None, 0.25
 
@@ -216,8 +204,6 @@ def detect():
         # Reducir tamaño de la imagen para acelerar inferencia
         img = cv2.resize(img, (640, 640), interpolation=cv2.INTER_AREA)
 
-        if DEBUG_MODE: print(f"Iniciando detección con confianza {confidence}...")
-
         # Llamada al modelo
         results = yolo_model.detect(img, conf_threshold=confidence)
         if results is None:
@@ -241,5 +227,5 @@ def detect():
     
 # EJECUCION
 if __name__ == '__main__':
-    main()
+    
     app.run(port=5000,debug=True)

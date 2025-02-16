@@ -148,7 +148,7 @@ body {
 .main-div select.deparments {
   padding: 8px 40px 8px 40px;
   border-radius: 10px 2px 2px 10px;
-  
+  font-size: medium;
 }
 
 .main-div select.deparments:hover{

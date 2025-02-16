@@ -63,6 +63,11 @@ body {
   border: 1px solid black;
 }
 
+.item-grid:hover{
+  transform: translateY(-3px);
+  transition: ease-out 0.3s;
+}
+
 /* Overlay styling */
 .item-grid .overlay {
   position: absolute;
