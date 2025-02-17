@@ -58,15 +58,17 @@ a.btn {
   font-weight: bold;
   font-size: 1rem;
   border: 1px solid var(--verde-900);
+  border-bottom: 2px solid var(--verde-900);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   display: inline-block;
 }
 
 a.btn:hover {
-  background: linear-gradient(to right, var(--verde-700), var(--verde-600), var(--verde-700));
-  transform: translate(0px,-3px);
+  background: linear-gradient(to right, var(--verde-500), var(--verde-400), var(--verde-500));
+  scale: 1.02;
 }
+
 
 
 /* Media queries */

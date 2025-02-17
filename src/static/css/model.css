@@ -219,7 +219,6 @@ main div ul#detectionsList li {
 /* Ocultar el tooltip por defecto */
 .tooltip-text {
     opacity: 0;
-    /* Oculto por defecto */
     width: 135px;
     background-color: #2ea664;
     color: var(--verde-50);
@@ -229,49 +228,27 @@ main div ul#detectionsList li {
     border-radius: 5px;
     position: absolute;
     top: -120px;
-    /* Ajusta la posición para que esté sobre la imagen */
     left: 50%;
     transform: translateX(-25%);
-    transition: opacity 0.3s ease-in-out;
-
-    /* Transición suave */
+    transition: opacity 0.5s ease-out;
     z-index: 9000;
 }
 
-/* Flecha del tooltip */
-.tooltip-text::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    /* Flecha debajo del tooltip */
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-}
-
-/* Mostrar el tooltip al pasar el ratón sobre la imagen */
 .tooltip-container:active .tooltip-text,
 .tooltip-container:hover .tooltip-text {
     opacity: 1;
     animation: hideTooltip 18s forwards;
-    /* Inicia la animación para ocultarlo después de 3 segundos */
 }
 
 /* Animación para ocultar el tooltip */
 @keyframes hideTooltip {
     0% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
         opacity: 0;
     }
+    2% {
+        opacity: 1;
+    }
+    
 }
 
 
@@ -348,17 +325,23 @@ main div ul#detectionsList li {
     flex-direction: row;
     text-align: center;
     align-items: center;
+    transition: ease-in-out 0.3s;
 }
 
 #captureBtn #logo, label#fileinputlabel #logo{
     width: 16px;
     aspect-ratio: 1/1;
     margin-right: 5px;
+    transition: ease 0.5s;
 }
 
 label#fileinputlabel:hover {
     cursor: pointer;
     background-color: var(--verde-600);
+}
+
+#captureBtn:hover #logo, label#fileinputlabel:hover #logo{
+    transform: rotate(90deg);
 }
 
 body div.colors {

@@ -79,7 +79,7 @@ section .part1 .btns {
 section .part1 a {
   background-color: var(--verde-500);
   text-decoration: none;
-  border: 1px solid var(--verde-900);
+  border: 3px solid var(--verde-900);
   padding: 15px;
   margin: 5px 15px 5px 15px;
   border-radius: 8px;
@@ -87,6 +87,7 @@ section .part1 a {
   color: white;
   z-index: 2;
   min-width: 152px;
+  transition: ease-out 0.3s;
 }
 
 section .part1 a #logo{
@@ -102,7 +103,8 @@ section .part1 a #logo{
 }
 
 section .part1 a:hover {
-  background-color: var(--verde-600);
+  border: solid 3px var(--verde-700);
+  scale: 1.03;
 }
 
 section .part2 {

@@ -118,8 +118,17 @@ body {
 }
 
 .main-div div.contacto form label {
-  font-size: larger;
-  font-weight: 600;
+  font-size: x-large;
+  
+}
+.main-div div.contacto form label span.symbol{
+  display: inline-flex;
+  width: 28px; 
+  color: rgb(248, 248, 248);
+  background: var(--verde-600);
+  border-radius: 5px;
+  justify-content: center;  
+  align-items: center; 
 }
 
 .main-div div.contacto form input {
@@ -153,8 +162,9 @@ body {
 
 div.contacto form input#Enviar {
   background-color: var(--verde-400);
-  font-weight: 700;
+  font-size: larger;
   color: var(--negro-950);
+  transition: ease-out 0.3s;
 }
 
 div.contacto form input#Enviar:hover {
@@ -182,5 +192,9 @@ body.dark-mode .main-div p {
 body.dark-mode .main-div div.contacto p {
   background-color: transparent;
   border: 0;
+  color: white;
+}
+
+body.dark-mode .main-div div.contacto #form_mail{
   color: white;
 }

@@ -60,6 +60,12 @@ body {
   border-bottom: 1px solid #121212;
   font-weight: bold;
   justify-content: space-between;
+  
+}
+
+.main-div article .lbl_text{
+  font-size: large;
+  color: var(--dark-blue);
 }
 
 .main-div article .toggle-content {
@@ -86,10 +92,6 @@ body {
 
 .main-div article div.btn_4 {
   background-color: #4aff77;
-}
-
-.main-div article .toggle-button label {
-  color: black;
 }
 
 @media (max-width: 1150px) {

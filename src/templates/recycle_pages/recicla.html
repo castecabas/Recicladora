@@ -36,9 +36,10 @@
 
             <select title="deparments" class="deparments">
                 <option selected hidden>Seleccionar</option>
+
                 {% for deparment in deparments %}
                 {% with deparment=deparment %}
-                <option value="{{ deparment.name }}">{{ deparment.name }}</option>
+                <option class="select-option" value="{{ deparment.name }}">{{ deparment.name }}</option>
                 {% endwith %}
                 {% endfor %}
 

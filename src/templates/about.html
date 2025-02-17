@@ -46,11 +46,11 @@
                 {% endwith %}
 
                 <form id="form_mail" action="/about/send_email" method="post">
-                    <label for="asunto">Asunto:</label>
+                    <label for="asunto"> <span class="symbol">&#10149;</span> Asunto</label>
                     <input type="text" id="asunto" name="asunto" placeholder="Titulo" required>
-                    <label for="email">Email:</label>
+                    <label for="email"><span class="symbol">✉</span> Email</label>
                     <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
-                    <label for="mensaje">Mensaje:</label>
+                    <label for="mensaje"><span class="symbol">✎</span> Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Descripcion" required></textarea>
                     <input type="submit" value="Enviar" id="Enviar">
                 </form>

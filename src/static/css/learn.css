@@ -93,10 +93,11 @@ body {
   font-weight: bold;
   color: #00fc69;
   text-decoration: none;
+  transition: 0.3s ease-out;
 }
 
 .item-title:hover {
-  color: #00d370;
+  color: #00c569;
 }
 
 .item-paragraph {

@@ -58,6 +58,11 @@ notices=[
         "image_url":"https://www.leonardo-gr.com/wp-content/uploads/2022/05/residuo.jpg",
         "href_link":"https://www.olores.org/es/noticias/conferencias-y-otros-eventos/1390-i-congreso-internacional-gestion-ambiental-de-olores-colombia-2025",
         "name":"I Congreso Internacional Gestión Ambiental de Olores"
+    },
+    {
+        "image_url":"https://images.pexels.com/photos/2547565/pexels-photo-2547565.jpeg",
+        "href_link":"https://expogreentech.co",
+        "name":"Expo GreenTech"
     }
     ]
 
