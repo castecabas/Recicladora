@@ -89,6 +89,12 @@ section .part1 a {
   min-width: 152px;
 }
 
+section .part1 a #logo{
+  aspect-ratio: 1/1;
+  width: 18px;
+  margin-right: 5px;
+}
+
 @media (max-width: 500px) {
   section .part1 .btns {
     flex-direction: column;

@@ -42,11 +42,13 @@ html {
 .text-p {
   color: var(--verde-50);
   font-size: 1rem;
-  margin: 15px 10px 25px 0px;
+  margin: 15px 10px 10px 0px;
+  padding: 5px 0px 5px 0px;
   font-weight: bold;
+  background: rgba(0, 0,0, 0.45);
 }
 
-.btn {
+a.btn {
   background: linear-gradient(to right, var(--verde-600), var(--verde-500), var(--verde-600));
   color: #f1fdf0;
   padding: 15px 25px;
@@ -56,12 +58,16 @@ html {
   font-weight: bold;
   font-size: 1rem;
   border: 1px solid var(--verde-900);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
 }
 
-.btn:hover {
-  background: var(--verde-600);
-  
+a.btn:hover {
+  background: linear-gradient(to right, var(--verde-700), var(--verde-600), var(--verde-700));
+  transform: translate(0px,-3px);
 }
+
 
 /* Media queries */
 @media (max-width: 768px) {
