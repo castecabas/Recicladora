@@ -1,10 +1,7 @@
 # gunicorn.conf.py
 
 # Número de workers (ajusta según los recursos disponibles)
-workers = 2
-
-# Tipo de worker (sync es el predeterminado)
-worker_class = "sync"
+workers = 1
 
 # Tiempo de espera para cada solicitud (en segundos)
 timeout = 120
