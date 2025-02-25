@@ -6,14 +6,40 @@
 
   Se va a tener en cuenta las siguientes clases:
 
-  ["Comida", "Planta", "Fruta o Verdura", "Base de Carton", "Caja de Carton", 
-  "Contenedor de Carton", "Forma de Carton", "Botella de Vidrio", "Vajilla de Vidrio", 
-  "Fragmentos de Vidrio", "Frasco de Vidrio", "Jarra de Vidrio", "Aluminio", 
-  "Contenedor Metalico", "Latas de Alimento", "Menaje Metalico", "Metal Menor", 
-  "Utensilio Metalico", "Bateria o Pila", "Carta de Papel", "Recibo o Factura", 
-  "Periodico o Revista", "Forma de Papel", "Papel de Higiene", "Bolsa de Plastico", 
-  "Botella de Plastico", "Contenedor de Plastico", "Envase de Plastico", 
-  "Vajilla de Plastico", "Tapa de Plastico", "Utensilio de Plastico"]
+| Categoría               | Subcategoría               |
+|-------------------------|---------------------------|
+| **Biodegradable**       | Comida                    |
+|                         | Planta                    |
+|                         | Fruta o Verdura           |
+| **Cartón**              | Base de Cartón            |
+|                         | Caja de Cartón            |
+|                         | Contenedor de Cartón      |
+|                         | Forma de Cartón           |
+| **Vidrio**              | Botella de Vidrio         |
+|                         | Vajilla de Vidrio         |
+|                         | Fragmentos de Vidrio      |
+|                         | Frasco de Vidrio          |
+|                         | Jarra de Vidrio           |
+| **Metal**               | Aluminio                  |
+|                         | Contenedor Metálico       |
+|                         | Latas de Alimento        |
+|                         | Menaje Metálico           |
+|                         | Metal Menor               |
+|                         | Utensilio Metálico        |
+|                         | Batería o Pila            |
+| **Papel**               | Carta de Papel            |
+|                         | Recibo o Factura          |
+|                         | Periódico o Revista       |
+|                         | Forma de Papel            |
+|                         | Papel de Higiene          |
+| **Plástico**            | Bolsa de Plástico         |
+|                         | Botella de Plástico       |
+|                         | Contenedor de Plástico    |
+|                         | Envase de Plástico        |
+|                         | Vajilla de Plástico       |
+|                         | Tapa de Plástico          |
+|                         | Utensilio de Plástico     |
+
 
  # Requisitos de instalacion 
   (verificar que estén actualizados):
