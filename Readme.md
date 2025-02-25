@@ -1,4 +1,4 @@
-  🌱 Proyecto Recicladora 🌱
+#  🌱 Proyecto Recicladora 🌱
 
   Es un trabajo de tesis tecnologica donde presenta un aplicativo web y movil, en el cual presenta un modelo neuronal YOLO (version 11 - nano) en el cual es utilizado como objetivo en la deteccion de materiales reciclables.
 
@@ -6,16 +6,43 @@
 
   Se va a tener en cuenta las siguientes clases:
 
-  ["Comida", "Planta", "Fruta o Verdura", "Base de Carton", "Caja de Carton", 
-  "Contenedor de Carton", "Forma de Carton", "Botella de Vidrio", "Vajilla de Vidrio", 
-  "Fragmentos de Vidrio", "Frasco de Vidrio", "Jarra de Vidrio", "Aluminio", 
-  "Contenedor Metalico", "Latas de Alimento", "Menaje Metalico", "Metal Menor", 
-  "Utensilio Metalico", "Bateria o Pila", "Carta de Papel", "Recibo o Factura", 
-  "Periodico o Revista", "Forma de Papel", "Papel de Higiene", "Bolsa de Plastico", 
-  "Botella de Plastico", "Contenedor de Plastico", "Envase de Plastico", 
-  "Vajilla de Plastico", "Tapa de Plastico", "Utensilio de Plastico"]
+| Categoría               | Subcategoría               |
+|-------------------------|---------------------------|
+| **Biodegradable**       | Comida                    |
+|                         | Planta                    |
+|                         | Fruta o Verdura           |
+| **Cartón**              | Base de Cartón            |
+|                         | Caja de Cartón            |
+|                         | Contenedor de Cartón      |
+|                         | Forma de Cartón           |
+| **Vidrio**              | Botella de Vidrio         |
+|                         | Vajilla de Vidrio         |
+|                         | Fragmentos de Vidrio      |
+|                         | Frasco de Vidrio          |
+|                         | Jarra de Vidrio           |
+| **Metal**               | Aluminio                  |
+|                         | Contenedor Metálico       |
+|                         | Latas de Alimento         |
+|                         | Menaje Metálico           |
+|                         | Metal Menor               |
+|                         | Utensilio Metálico        |
+| **Nocivo**              | Batería o Pila            |
+| **Papel**               | Carta de Papel            |
+|                         | Recibo o Factura          |
+|                         | Periódico o Revista       |
+|                         | Forma de Papel            |
+|                         | Papel de Higiene          |
+| **Plástico**            | Bolsa de Plástico         |
+|                         | Botella de Plástico       |
+|                         | Contenedor de Plástico    |
+|                         | Envase de Plástico        |
+|                         | Vajilla de Plástico       |
+|                         | Tapa de Plástico          |
+|                         | Utensilio de Plástico     |
 
-  Requisitos de instalacion (verificar que estén actualizados):
+
+ # Requisitos de instalacion 
+  (verificar que estén actualizados):
 
   ° Instalar Ultralytics
   ° Instalar Numpy
@@ -29,5 +56,5 @@
 
     -> python app.py
 
-  Creditos:
+# Creditos:
   Carlos Steven Cardenas
