@@ -1,4 +1,4 @@
-  🌱 Proyecto Recicladora 🌱
+#  🌱 Proyecto Recicladora 🌱
 
   Es un trabajo de tesis tecnologica donde presenta un aplicativo web y movil, en el cual presenta un modelo neuronal YOLO (version 11 - nano) en el cual es utilizado como objetivo en la deteccion de materiales reciclables.
 
@@ -15,7 +15,8 @@
   "Botella de Plastico", "Contenedor de Plastico", "Envase de Plastico", 
   "Vajilla de Plastico", "Tapa de Plastico", "Utensilio de Plastico"]
 
-  Requisitos de instalacion (verificar que estén actualizados):
+ # Requisitos de instalacion 
+  (verificar que estén actualizados):
 
   ° Instalar Ultralytics
   ° Instalar Numpy
@@ -29,5 +30,5 @@
 
     -> python app.py
 
-  Creditos:
+# Creditos:
   Carlos Steven Cardenas
