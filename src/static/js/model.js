@@ -45,12 +45,47 @@ async function switchCamera() {
     updateCurrentCamera();
 
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-            video: { deviceId: { exact: cameras[currentCameraIndex].deviceId } }
-        });
-        document.getElementById('video').srcObject = stream;
+        // Detener el stream actual si existe
+        const video = document.getElementById('video');
+        if (video.srcObject) {
+            video.srcObject.getTracks().forEach(track => track.stop());
+        }
+
+        // Configurar las restricciones para la cámara
+        const constraints = {
+            video: {
+                deviceId: { exact: cameras[currentCameraIndex].deviceId },
+                facingMode: undefined // Inicialmente undefined
+            }
+        };
+
+        // Intentar determinar si es una cámara trasera
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            const label = cameras[currentCameraIndex].label.toLowerCase();
+            if (label.includes('back') || label.includes('trasera') || label.includes('rear')) {
+                constraints.video.facingMode = 'environment';
+            } else if (label.includes('front') || label.includes('frontal')) {
+                constraints.video.facingMode = 'user';
+            }
+        }
+
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        video.srcObject = stream;
     } catch (error) {
         console.error('Error al cambiar de cámara:', error);
+        // Intentar con configuración alternativa si falla
+        try {
+            const alternativeConstraints = {
+                video: {
+                    facingMode: currentCameraIndex % 2 === 0 ? 'user' : 'environment'
+                }
+            };
+            const stream = await navigator.mediaDevices.getUserMedia(alternativeConstraints);
+            document.getElementById('video').srcObject = stream;
+        } catch (fallbackError) {
+            console.error('Error en fallback de cámara:', fallbackError);
+        }
     }
 }
 

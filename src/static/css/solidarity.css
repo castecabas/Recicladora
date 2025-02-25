@@ -41,7 +41,7 @@ body {
 }
 
 .main-div section {
-  max-width: 80vw;
+  max-width: 90vw;
   padding-top: 20px;
 }
 
@@ -60,44 +60,55 @@ body {
   flex-direction: row-reverse;
 }
 
+.main-div div.contain-image{
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 0;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.main-div div.contain-image img{
+  border-radius: 50%;
+  max-height: 400px;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  margin-bottom: 15px;
+  z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
 @media (max-width: 1370px) {
   .main-div section article.step_1,
   .main-div section article.step_2 {
     flex-direction: column-reverse;
+
   }
 
   .main-div div.contain-image {
-    height: 500px;
+    height: 300px;
+
+  & img{
+    height: 300px;
+  }
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .main-div section article.step_1,
   .main-div section article.step_2 {
     flex-direction: column-reverse;
   }
 
   .main-div div.contain-image {
-    height: 300px;
-  }
+    height: 200px;
 
-  .main-div div.contain-image img {
-    max-width: 300px;
+  & img{
+    height: 200px;
   }
-}
-
-@media (max-width: 500px) {
-  .main-div section article.step_1,
-  .main-div section article.step_2 {
-    flex-direction: column-reverse;
-  }
-
-  .main-div div.contain-image {
-    height: 300px;
-  }
-
-  .main-div div.contain-image img {
-    max-width: 210px;
   }
 }
 
@@ -129,27 +140,6 @@ body {
   border-radius: 6px;
   align-content: center;
   z-index: 1;
-}
-
-.main-div section article div.contain-image {
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  padding: 0;
-  aspect-ratio: 1/1;
-  position: relative;
-}
-
-.main-div section article div.contain-image img {
-  border-radius: 50%;
-  width: 450px;
-  aspect-ratio: 1/1;
-  padding: 10px;
-  margin-bottom: 15px;
-  z-index: 2;
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: cover;
 }
 
 /* MODO OSCURO */

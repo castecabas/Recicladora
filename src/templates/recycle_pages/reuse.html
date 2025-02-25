@@ -29,19 +29,17 @@
                     <div class="toggle-content">
                         {% for craft in material.crafts %}
                         <div class="item-content">
-                            <img class="miniature" loading="lazy" src="{{craft.image_link}}">
+                            <div class="image-container">
+                                <img class="miniature" loading="lazy" src="{{craft.image_link}}" >
+                            </div>
                             <a href="{{craft.video_link}}" class="txt">{{craft.name}}<br>
-                                <img
-                                class="logo-ytb" src="{{url_for('static', filename='img/icon_yt.webp')}}"></a>
+                                <img class="logo-ytb" src="{{url_for('static', filename='img/icon_yt.webp')}}" width="40" height="40"></a>
                         </div>
-
                         {%endfor%}
-
                     </div>
                 </article>
                 {%endfor%}
             </section>
-
         </main>
         {% include 'components/footer.html' %}
     </div>

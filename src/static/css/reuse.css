@@ -148,6 +148,7 @@ body {
   color: black;
   font-size: larger;
   width: 250px;
+  transition: ease 0.1s;
 }
 
 .main-div article .toggle-content .item-content a.txt:hover {

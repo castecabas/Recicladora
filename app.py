@@ -9,6 +9,7 @@ import cv2
 import numpy as np
 import base64
 import re
+import tempfile
 import gdown
 from src.data import areas, notices, deparments, materials
 
@@ -19,8 +20,12 @@ MODEL_PATH = "src/model/best_yolov11.pt"  # Cambia esto según tu modelo
 # Verifica si el modelo ya existe, si no, lo descarga
 if not os.path.exists(MODEL_PATH):
     print("Descargando modelo desde Google Drive...")
-    gdown.download(f"https://drive.google.com/uc?id={FILE_ID}", MODEL_PATH, quiet=False)
-    print("Modelo descargado con éxito.")
+    try:
+        os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
+        gdown.download(f"https://drive.google.com/uc?id={FILE_ID}", MODEL_PATH, quiet=False)
+        print("Modelo descargado con éxito.")
+    except Exception as e:
+        print(f"Error al descargar el modelo: {e}")
 
 
 template_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src', 'templates')
@@ -40,7 +45,10 @@ app.config['MAIL_PASSWORD'] = 'bllqzryutqqmmcdh'
 
 mail = Mail(app)
 
-yolo_model = YOLOModel('src/model/best_yolov11.pt')
+try:
+    yolo_model = YOLOModel('src/model/best_yolov11.pt')
+except Exception as e:
+    print(f"Error al cargar el modelo: {e}")
 camera = Camera()
 
 # RUTAS
