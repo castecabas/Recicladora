@@ -22,11 +22,11 @@
 |                         | Jarra de Vidrio           |
 | **Metal**               | Aluminio                  |
 |                         | Contenedor Metálico       |
-|                         | Latas de Alimento        |
+|                         | Latas de Alimento         |
 |                         | Menaje Metálico           |
 |                         | Metal Menor               |
 |                         | Utensilio Metálico        |
-|                         | Batería o Pila            |
+| **Nocivo**              | Batería o Pila            |
 | **Papel**               | Carta de Papel            |
 |                         | Recibo o Factura          |
 |                         | Periódico o Revista       |
