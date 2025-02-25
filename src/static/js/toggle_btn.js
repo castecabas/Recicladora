@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Precargar todas las imágenes para que tengamos sus dimensiones
+    // Precargar todas las imágenes 
     const preloadImages = () => {
         const images = document.querySelectorAll('.miniature');
         images.forEach(img => {
             // Establecer un evento para cuando la imagen cargue
             img.onload = function() {
-                // Cuando la imagen cargue, actualiza la altura del contenedor si está abierto
+                // Cuando la imagen cargue, actualiza la altura del contenedor
                 const toggleContent = img.closest('.toggle-content');
                 if (toggleContent && toggleContent.classList.contains('show')) {
                     toggleContent.style.maxHeight = toggleContent.scrollHeight + "px";
@@ -26,13 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".toggle-button").forEach(button => {
         button.addEventListener("click", function () {
             const content = this.nextElementSibling;
-
-            // Alternar el contenido actual sin cerrar los otros
+            
             if (content.classList.contains("show")) {
                 content.style.maxHeight = null;
                 content.classList.remove("show");
             } else {
-                // Actualizar la altura después de un pequeño retraso para dar tiempo a que el DOM se actualice
                 setTimeout(() => {
                     content.style.maxHeight = content.scrollHeight + "px";
                 }, 10);
