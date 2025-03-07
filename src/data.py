@@ -2,43 +2,43 @@ areas=[
     {
         'title':'Plastico',
         'description':'Aprende sobre los diferentes tipos de plásticos, sus usos comunes, y el impacto ambiental que generan.',
-        'image_link':'https://i.postimg.cc/W3J1Syw2/L-plastic.jpg',
+        'image_link':'../static/img/L-plastic.webp',
         'href_to':'/learn/plastic'
     },
     {
         'title':'Vidrio',
         'description':'Conoce su proceso de reciclaje y los beneficios de reutilizar este material, que contribuye a un entorno más sostenible.',
-        'image_link':'https://i.postimg.cc/fLbPY3mX/L-glass.webp',
+        'image_link':'../static/img/L-glass.webp',
         'href_to':'/learn/glass'
     },
     {
         'title':'Biodegradable',
         'description':'Conoce qué significa realmente que un material sea biodegradable y su importancia en la reducción de residuos',
-        'image_link':'https://i.postimg.cc/6pdFKxB7/L-bio.webp',
+        'image_link':'../static/img/L-bio.webp',
         'href_to':'/learn/biodegradable'
     },
     {
         'title':'Metal',
         'description':'Aprende sobre los tipos de metales que se encuentran en productos de uso diario y su importancia en el reciclaje.',
-        'image_link':'https://i.postimg.cc/6q211DHp/L-metal.webp',
+        'image_link':'../static/img/L-metal.webp',
         'href_to':'/learn/metal'
     },
     {
         'title':'Carton',
         'description':'Descubre por qué el cartón es uno de los materiales reciclables más comunes y fáciles de reutilizar',
-        'image_link':'https://i.postimg.cc/W4TCbY45/L-carton.webp',
+        'image_link':'../static/img/L-carton.webp',
         'href_to':'/learn/cardboard'
     },
     {
         'title':'Papel',
         'description':'Conoce el ciclo de reciclaje del papel, un material que puede ser reciclado varias veces',
-        'image_link':'https://i.postimg.cc/XNrjbqmp/L-paper.webp',
+        'image_link':'../static/img/L-paper.webp',
         'href_to':'/learn/paper'
     },
     {
         'title':'Nocivos',
         'description':'Explora el impacto de los materiales nocivos, como baterías y pilas, en el medio ambiente.',
-        'image_link':'https://i.postimg.cc/5yhkcnGq/L-nocivo.webp',
+        'image_link':'../static/img/L-nocivo.webp',
         'href_to':'/learn/nocivos'
     }
 ]

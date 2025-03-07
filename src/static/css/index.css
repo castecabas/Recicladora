@@ -9,8 +9,7 @@
 
 body,
 html {
-  background: var(--blanco-pagina) url(https://i.postimg.cc/mrnZNhTK/index.webp) no-repeat
-    center center/cover;
+  background: url("../img/index.webp") var(--blanco-pagina)  no-repeat center center/cover;
   min-height: 100vh;
   transition: all 0.5s ease;
 }
