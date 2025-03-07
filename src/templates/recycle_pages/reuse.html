@@ -24,7 +24,7 @@
                 <article>
                     <div class="toggle-button {{ material.button_color }}">
                         <label class="lbl_text">{{material.name}}</label>
-                        <img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" height="10">
+                        <img src="https://cdn-icons-png.flaticon.com/512/54/54785.png" height="10" alt="down-icon">
                     </div>
                     <div class="toggle-content">
                         {% for craft in material.crafts %}
@@ -33,7 +33,7 @@
                                 <img class="miniature" loading="lazy" src="{{craft.image_link}}" >
                             </div>
                             <a href="{{craft.video_link}}" class="txt">{{craft.name}}<br>
-                                <img class="logo-ytb" src="{{url_for('static', filename='img/icon_yt.webp')}}" width="40" height="40"></a>
+                                <img class="logo-ytb" src="{{url_for('static', filename='img/icon_yt.webp')}}" width="40" height="40" alt="youtube-icon"></a>
                         </div>
                         {%endfor%}
                     </div>

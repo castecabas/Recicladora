@@ -63,6 +63,12 @@ main div p {
     font-weight: bold;
 }
 
+main div h5{
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
 main div #video {
     border-radius: 20px;
     max-width: 640px;
@@ -119,7 +125,7 @@ main div #captureBtn,
 main div #fileinputlabel {
     border-radius: 20px;
     background-color: var(--verde-500);
-    color: white;
+    color: #1c2d17;
     font-weight: bold;
     padding: 10px 15px 10px 15px;
     border: 1px solid black;
@@ -289,7 +295,7 @@ main div ul#detectionsList li {
 .aside #switchCameraBtn {
     border-radius: 4px;
     background-color: var(--verde-500);
-    color: white;
+    color: #1c2d17;
     border: 1px solid black;
 }
 
