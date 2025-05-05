@@ -48,7 +48,10 @@
   ° Instalar Numpy
   ° Instalar Flask
   ° Instalar Opencv-python (cv2)
-    
+  
+    Alternativa 1
+    -> pip install -r requirements.txt
+    Alternativa 2
     -> pip install Ultralytics flask opencv-python numpy
 
   ° Verificar que el archivo del modelo (.pt) exista.
