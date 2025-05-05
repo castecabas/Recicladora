@@ -51,6 +51,7 @@ Se debe Tener instalado un IDE y Python (Preferente v3.9.0)
 La estructura se Descomponen de lo siguiente:
 
   ° Carpeta SRC -> abarca todo lo relacionado con el aplicativo web.
+
   ° Carpeta Scripts -> abarca todo en enfoque de Entrenamiento(trainer) 
 
 Verificar que estén actualizados:
