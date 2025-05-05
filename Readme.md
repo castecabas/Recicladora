@@ -42,7 +42,13 @@
 
 
  # Requisitos de instalacion 
-  (verificar que estén actualizados):
+Clona el respositorio (Boton Verde "<> Code").
+  ° Codigo
+  ° Descargando el .ZIP
+
+Se debe Tener instalado un IDE y Python (Preferente v3.9.0)
+
+Verificar que estén actualizados:
 
   ° Instalar Ultralytics
   ° Instalar Numpy
