@@ -43,7 +43,9 @@
 
  # Requisitos de instalacion 
 Clona el respositorio (Boton Verde "<> Code").
+
   ° Codigo
+  
   ° Descargando el .ZIP
 
 Se debe Tener instalado un IDE y Python (Preferente v3.9.0)
