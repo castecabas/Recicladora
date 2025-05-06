@@ -44,17 +44,17 @@
  # Requisitos de instalacion 
 1. Clona el respositorio (Boton Verde "<> Code").
 
-  ° Opcion 1: Por Codigo
+    ° Opcion 1: Por Codigo
   
-  ° Opcion 2: Descargando el .ZIP
+    ° Opcion 2: Descargando el .ZIP
 
 2. Se debe Tener instalado un IDE y Python (Preferente v3.9.0)
 
-La estructura se Descomponen de lo siguiente:
+  La estructura se Descomponen de lo siguiente:
 
-  ° Carpeta SRC -> abarca todo lo relacionado con el aplicativo web.
+    ° Carpeta SRC -> abarca todo lo relacionado con el aplicativo web.
 
-  ° Carpeta Scripts -> abarca todo en enfoque de Entrenamiento(trainer) 
+    ° Carpeta Scripts -> abarca todo en enfoque de Entrenamiento(trainer) 
 
 3. Verificar que estén actualizados:
 
