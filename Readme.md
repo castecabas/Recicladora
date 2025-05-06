@@ -42,13 +42,13 @@
 
 
  # Requisitos de instalacion 
-Clona el respositorio (Boton Verde "<> Code").
+1. Clona el respositorio (Boton Verde "<> Code").
 
-  ° Codigo
+  ° Opcion 1: Por Codigo
   
-  ° Descargando el .ZIP
+  ° Opcion 2: Descargando el .ZIP
 
-Se debe Tener instalado un IDE y Python (Preferente v3.9.0)
+2. Se debe Tener instalado un IDE y Python (Preferente v3.9.0)
 
 La estructura se Descomponen de lo siguiente:
 
@@ -56,7 +56,7 @@ La estructura se Descomponen de lo siguiente:
 
   ° Carpeta Scripts -> abarca todo en enfoque de Entrenamiento(trainer) 
 
-Verificar que estén actualizados:
+3. Verificar que estén actualizados:
 
   ° Instalar Ultralytics
   ° Instalar Numpy
